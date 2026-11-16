@@ -1,13 +1,13 @@
 # Chart of Nuclides Data (2024)
 
-Half-lives, decay modes and binding energies for 3,147 radioactive nuclides, from the IAEA LiveChart of Nuclides.
+Half-lives, decay modes and binding energies for 3,358 nuclides: 3,105 radioactive nuclides from the IAEA LiveChart of Nuclides, plus 253 stable nuclides.
 
 ## Files
 
 | File | What it is |
 |---|---|
 | `Nuclides2024.xlsx` | Workbook for class use. Sheets: About, Student View, Full Data, Decay Modes |
-| `data/nuclides_student_view.csv` | One row per nuclide (ground state), 14 columns |
+| `data/nuclides_student_view.csv` | One row per nuclide (ground state), stable ones included, 14 columns |
 | `data/nuclides_clean.csv` | Every source row, cleaned, 66 columns |
 | `data/Nuclides2024_raw.csv` | Original IAEA export, unchanged |
 
@@ -20,7 +20,8 @@ Exported 2024. Please credit the IAEA if you reuse this data, and check the IAEA
 ## How the source is laid out
 
 - Each row is one decay mode of one nuclear state. A nuclide with three decay paths (U-238: alpha, fission, double beta) takes three rows. Isomers (levelEnergy above 0) get their own rows too. That is why the raw file has 6,343 rows for 3,147 nuclides.
-- Only radioactive nuclides are included. Stable nuclides such as H-1, C-12 and Fe-56 are not in the file.
+- Only radioactive nuclides are included. Stable nuclides such as H-1, C-12 and Fe-56 are not in the IAEA file.
+- Some stable nuclides (for example Au-197, Pb-207) appear in the IAEA file only through their short-lived isomers.
 - Energies are in keV unless the column name says MeV. `bindingEnergy` is per nucleon.
 
 ## Changes made in the cleaned files
@@ -33,7 +34,12 @@ Exported 2024. Please credit the IAEA if you reuse this data, and check the IAEA
 - About 32 very short-lived nuclides give a width in eV, keV or MeV instead of a time. Their `halflife_seconds` is blank.
 - Changed a few Greek-letter decay codes to match the rest of the file (β⁻ to B-, ɑ to A, ε to EC).
 
-## Student View columns
+## Student View
+
+- Ground states only. Isomers (excited states) are left out. They are still in `nuclides_clean.csv`.
+- The 253 stable nuclides were added from the standard list of stable isotopes, since the IAEA file does not have them. They show `STABLE` for half-life and `stable` for Half-life measured?. Extremely long-lived nuclides that the IAEA file leaves out (such as Xe-124, Kr-78 and Pb-204) are counted as stable here.
+
+### Columns
 
 Z, N, A, Symbol, Nuclide, Half-life qualifier, Half-life, Unit, Half-life (s), Half-life measured?, Main decay mode, Main mode %, Other decay modes, Binding energy per nucleon (MeV)
 

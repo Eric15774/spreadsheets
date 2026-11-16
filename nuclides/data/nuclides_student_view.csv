@@ -1,9 +1,13 @@
 Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life measured?,Main decay mode,Main mode %,Other decay modes,Binding energy per nucleon (MeV)
 0,1,1,n,1n,,608.9,s,608.9,yes,B-,100,,
+1,0,1,H,1H,,STABLE,,,stable,,,,
+1,1,2,H,2H,,STABLE,,,stable,,,,
 1,2,3,H,3H,,12.3221,y,388856000.0,yes,B-,100,,2.82
 1,3,4,H,4H,,3.3,MeV,,yes,N,100,,1.72
 1,4,5,H,5H,,5.3,MeV,,yes,2N,100,,1.33
 1,6,7,H,7H,,0.18,MeV,,yes,2N,,,0.94
+2,1,3,He,3He,,STABLE,,,stable,,,,
+2,2,4,He,4He,,STABLE,,,stable,,,,
 2,3,5,He,5He,,719,keV,,yes,N,100,,5.51
 2,4,6,He,6He,,807.12,ms,0.80712,yes,B-,100,,4.87
 2,5,7,He,7He,,195,keV,,yes,N,100,,4.12
@@ -12,6 +16,8 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 2,8,10,He,10He,,1.8,MeV,,yes,2N,100,,2.99
 3,1,4,Li,4Li,,5,MeV,,yes,P,100,,1.15
 3,2,5,Li,5Li,,1.23,MeV,,yes,P,100,,5.26
+3,3,6,Li,6Li,,STABLE,,,stable,,,,
+3,4,7,Li,7Li,,STABLE,,,stable,,,,
 3,5,8,Li,8Li,,838.79,ms,0.83879,yes,B-,100,B-A 100%,5.15
 3,6,9,Li,9Li,,178,ms,0.178,yes,B-,100,B-N 51%; B-A 12.3%,5.03
 3,7,10,Li,10Li,,,MeV,,no,N,100,,4.53
@@ -21,6 +27,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 4,2,6,Be,6Be,,92,keV,,yes,2P,100,,4.48
 4,3,7,Be,7Be,,53.3,d,4605120.0,yes,EC,100,,5.37
 4,4,8,Be,8Be,,5.57,eV,,yes,A,100,,7.06
+4,5,9,Be,9Be,,STABLE,,,stable,,,,
 4,6,10,Be,10Be,,1390000.0,y,43865100000000.0,yes,B-,100,,6.49
 4,7,11,Be,11Be,,13.77,s,13.77,yes,B-,100,B-A 3.3%,5.95
 4,8,12,Be,12Be,,21.46,ms,0.02146,yes,B-,100,B-N 0.5%,5.72
@@ -31,6 +38,8 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 5,2,7,B,7B,,801,keV,,yes,P,100,,3.55
 5,3,8,B,8B,,772.1,ms,0.7721,yes,EC+B+,100,ECA 100%,4.71
 5,4,9,B,9B,,540,eV,,yes,P,100,,6.25
+5,5,10,B,10B,,STABLE,,,stable,,,,
+5,6,11,B,11B,,STABLE,,,stable,,,,
 5,7,12,B,12B,,20.22,ms,0.02022,yes,B-,100,B-A 0.6%,6.63
 5,8,13,B,13B,,17.16,ms,0.01716,yes,B-,100,B-N 0.266%,6.49
 5,9,14,B,14B,,12.34,ms,0.01234,yes,B-,100,B-N 6.04%,6.1
@@ -45,6 +54,8 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 6,3,9,C,9C,,126.5,ms,0.1265,yes,EC+B+,100,ECP 62%; ECA 37.9%,4.33
 6,4,10,C,10C,,19.3015,s,19.3015,yes,EC+B+,100,,6.03
 6,5,11,C,11C,,20.3401,m,1220.41,yes,EC+B+,100,,6.67
+6,6,12,C,12C,,STABLE,,,stable,,,,
+6,7,13,C,13C,,STABLE,,,stable,,,,
 6,8,14,C,14C,,5686,y,179437000000.0,yes,B-,100,,7.52
 6,9,15,C,15C,,2.451,s,2.451,yes,B-,100,,7.1
 6,10,16,C,16C,,750,ms,0.75,yes,B-,100,B-N 99.28%,6.92
@@ -57,6 +68,8 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 7,4,11,N,11N,,780,keV,,yes,P,100,,5.35
 7,5,12,N,12N,,10.996,ms,0.010996,yes,EC+B+,100,ECA 1.93%,6.17
 7,6,13,N,13N,,9.967,m,598.02,yes,EC+B+,100,,7.23
+7,7,14,N,14N,,STABLE,,,stable,,,,
+7,8,15,N,15N,,STABLE,,,stable,,,,
 7,9,16,N,16N,,7.13,s,7.13,yes,B-,100,B-A 0.00154%,7.37
 7,10,17,N,17N,,4.171,s,4.171,yes,B-,100,B-N 95.1%; B-A 0.0025%,7.28
 7,11,18,N,18N,,619,ms,0.619,yes,B-,100,B-A 12.2%; B-N 8.3%; B-2N,7.03
@@ -71,6 +84,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 8,5,13,O,13O,,8.58,ms,0.00858,yes,EC+B+,100,ECP 10.8%,5.81
 8,6,14,O,14O,,70.6183,s,70.6183,yes,EC+B+,100,,7.05
 8,7,15,O,15O,,122.268,s,122.268,yes,EC+B+,100,,7.46
+8,8,16,O,16O,,STABLE,,,stable,,,,
+8,9,17,O,17O,,STABLE,,,stable,,,,
+8,10,18,O,18O,,STABLE,,,stable,,,,
 8,11,19,O,19O,,26.47,s,26.47,yes,B-,100,,7.56
 8,12,20,O,20O,,13.51,s,13.51,yes,B-,100,,7.56
 8,13,21,O,21O,,3.42,s,3.42,yes,B-,100,,7.38
@@ -85,6 +101,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 9,7,16,F,16F,,23.1,keV,,yes,P,100,,6.96
 9,8,17,F,17F,,64.368,s,64.368,yes,EC+B+,100,,7.54
 9,9,18,F,18F,,109.734,m,6584.04,yes,EC+B+,100,,7.63
+9,10,19,F,19F,,STABLE,,,stable,,,,
 9,11,20,F,20F,,11.0064,s,11.0064,yes,B-,100,,7.72
 9,12,21,F,21F,,4.158,s,4.158,yes,B-,100,,7.73
 9,13,22,F,22F,,4.23,s,4.23,yes,B-,100,B-N 11%,7.62
@@ -102,6 +119,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 10,7,17,Ne,17Ne,,109.1,ms,0.1091,yes,EC+B+,100,ECP 94.4%; ECA 3.51%,6.64
 10,8,18,Ne,18Ne,,1.66432,s,1.66432,yes,EC+B+,100,,7.34
 10,9,19,Ne,19Ne,,17.2569,s,17.2569,yes,EC+B+,100,,7.56
+10,10,20,Ne,20Ne,,STABLE,,,stable,,,,
+10,11,21,Ne,21Ne,,STABLE,,,stable,,,,
+10,12,22,Ne,22Ne,,STABLE,,,stable,,,,
 10,13,23,Ne,23Ne,,37.148,s,37.148,yes,B-,100,,7.95
 10,14,24,Ne,24Ne,,3.38,m,202.8,yes,B-,100,,7.99
 10,15,25,Ne,25Ne,,602,ms,0.602,yes,B-,100,,7.83
@@ -120,6 +140,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 11,9,20,Na,20Na,,448,ms,0.448,yes,EC+B+,100,ECA 19.9%,7.29
 11,10,21,Na,21Na,,22.4548,s,22.4548,yes,EC+B+,100,,7.76
 11,11,22,Na,22Na,,2.6019,y,82109700.0,yes,EC+B+,100,,7.91
+11,12,23,Na,23Na,,STABLE,,,stable,,,,
 11,13,24,Na,24Na,,14.9578,h,53848.1,yes,B-,100,,8.06
 11,14,25,Na,25Na,,58.9,s,58.9,yes,B-,100,,8.1
 11,15,26,Na,26Na,,1.07128,s,1.07128,yes,B-,100,,8.0
@@ -139,6 +160,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 12,9,21,Mg,21Mg,,120,ms,0.12,yes,EC+B+,100,ECP 20.9%; ECA 0.115%,7.1
 12,10,22,Mg,22Mg,,3.87445,s,3.87445,yes,EC+B+,100,,7.66
 12,11,23,Mg,23Mg,,11.3042,s,11.3042,yes,EC+B+,100,,7.9
+12,12,24,Mg,24Mg,,STABLE,,,stable,,,,
+12,13,25,Mg,25Mg,,STABLE,,,stable,,,,
+12,14,26,Mg,26Mg,,STABLE,,,stable,,,,
 12,15,27,Mg,27Mg,,9.435,m,566.1,yes,B-,100,,8.26
 12,16,28,Mg,28Mg,,20.915,h,75294,yes,B-,100,,8.27
 12,17,29,Mg,29Mg,,1.31,s,1.31,yes,B-,100,,8.11
@@ -158,6 +182,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 13,11,24,Al,24Al,,2.053,s,2.053,yes,EC+B+,100,ECA 0.035%; ECP 0.0016%,7.64
 13,12,25,Al,25Al,,7.1666,s,7.1666,yes,EC+B+,100,,8.02
 13,13,26,Al,26Al,,717000.0,y,22626800000000.0,yes,EC+B+,100,,8.14
+13,14,27,Al,27Al,,STABLE,,,stable,,,,
 13,15,28,Al,28Al,,2.2483,m,134.898,yes,B-,100,,8.3
 13,16,29,Al,29Al,,6.56,m,393.6,yes,B-,100,,8.34
 13,17,30,Al,30Al,,3.61,s,3.61,yes,B-,100,,8.26
@@ -180,6 +205,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 14,11,25,Si,25Si,,219.2,ms,0.2192,yes,EC+B+,100,ECP 35%,7.48
 14,12,26,Si,26Si,,2.2452,s,2.2452,yes,EC+B+,100,,7.92
 14,13,27,Si,27Si,,4.111,s,4.111,yes,EC+B+,100,,8.12
+14,14,28,Si,28Si,,STABLE,,,stable,,,,
+14,15,29,Si,29Si,,STABLE,,,stable,,,,
+14,16,30,Si,30Si,,STABLE,,,stable,,,,
 14,17,31,Si,31Si,,157.24,m,9434.4,yes,B-,100,,8.45
 14,18,32,Si,32Si,,163.3,y,5153360000.0,yes,B-,100,,8.48
 14,19,33,Si,33Si,,6.17,s,6.17,yes,B-,100,,8.36
@@ -200,6 +228,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 15,13,28,P,28P,,270.3,ms,0.2703,yes,EC+B+,100,ECP 0.0013%; ECA 0.00086%,7.9
 15,14,29,P,29P,,4.1022,s,4.1022,yes,EC+B+,100,,8.25
 15,15,30,P,30P,,2.5,m,150,yes,EC+B+,100,,8.35
+15,16,31,P,31P,,STABLE,,,stable,,,,
 15,17,32,P,32P,,14.267,d,1232670.0,yes,B-,100,,8.46
 15,18,33,P,33P,,25.35,d,2190240.0,yes,B-,100,,8.51
 15,19,34,P,34P,,12.43,s,12.43,yes,B-,100,,8.44
@@ -222,7 +251,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 16,13,29,S,29S,,188,ms,0.188,yes,EC+B+,100,ECP 47%,7.74
 16,14,30,S,30S,,1.17976,s,1.17976,yes,EC+B+,100,,8.12
 16,15,31,S,31S,,2.5534,s,2.5534,yes,EC+B+,100,,8.28
+16,16,32,S,32S,,STABLE,,,stable,,,,
+16,17,33,S,33S,,STABLE,,,stable,,,,
+16,18,34,S,34S,,STABLE,,,stable,,,,
 16,19,35,S,35S,,87.35,d,7547040.0,yes,B-,100,,8.53
+16,20,36,S,36S,,STABLE,,,stable,,,,
 16,21,37,S,37S,,5.05,m,303,yes,B-,100,,8.45
 16,22,38,S,38S,,170.3,m,10218,yes,B-,100,,8.44
 16,23,39,S,39S,,11.5,s,11.5,yes,B-,100,,8.34
@@ -243,7 +276,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 17,15,32,Cl,32Cl,,299.1,ms,0.2991,yes,EC+B+,100,ECA 0.054%; ECP 0.026%,8.07
 17,16,33,Cl,33Cl,,2.506,s,2.506,yes,EC+B+,100,,8.3
 17,17,34,Cl,34Cl,,1.5265,s,1.5265,yes,EC+B+,100,,8.39
+17,18,35,Cl,35Cl,,STABLE,,,stable,,,,
 17,19,36,Cl,36Cl,,301000.0,y,9498840000000.0,yes,B-,98.1,EC+B+ 1.9%,8.52
+17,20,37,Cl,37Cl,,STABLE,,,stable,,,,
 17,21,38,Cl,38Cl,,37.236,m,2234.16,yes,B-,100,,8.5
 17,22,39,Cl,39Cl,,56.2,m,3372,yes,B-,100,,8.49
 17,23,40,Cl,40Cl,,1.33,m,79.8,yes,B-,100,,8.42
@@ -266,8 +301,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 18,15,33,Ar,33Ar,,173,ms,0.173,yes,EC+B+,100,ECP 38.7%,7.92
 18,16,34,Ar,34Ar,,846.46,ms,0.84646,yes,EC+B+,100,,8.19
 18,17,35,Ar,35Ar,,1.7754,s,1.7754,yes,EC+B+,100,,8.32
+18,18,36,Ar,36Ar,,STABLE,,,stable,,,,
 18,19,37,Ar,37Ar,,35.01,d,3024860.0,yes,EC,100,,8.52
+18,20,38,Ar,38Ar,,STABLE,,,stable,,,,
 18,21,39,Ar,39Ar,,268,y,8457440000.0,yes,B-,100,,8.56
+18,22,40,Ar,40Ar,,STABLE,,,stable,,,,
 18,23,41,Ar,41Ar,,109.61,m,6576.6,yes,B-,100,,8.53
 18,24,42,Ar,42Ar,,32.9,y,1038250000.0,yes,B-,100,,8.55
 18,25,43,Ar,43Ar,,5.37,m,322.2,yes,B-,100,,8.48
@@ -287,7 +325,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 19,17,36,K,36K,,341,ms,0.341,yes,EC+B+,100,ECP 0.048%; ECA 0.0034%,8.14
 19,18,37,K,37K,,1.23647,s,1.23647,yes,EC+B+,100,,8.33
 19,19,38,K,38K,,7.645,m,458.7,yes,EC+B+,100,,8.43
+19,20,39,K,39K,,STABLE,,,stable,,,,
 19,21,40,K,40K,,1250000000.0,y,3.9447e+16,yes,B-,89.28,EC+B+ 10.72%,8.53
+19,22,41,K,41K,,STABLE,,,stable,,,,
 19,23,42,K,42K,,12.359,h,44492.4,yes,B-,100,,8.55
 19,24,43,K,43K,,22.28,h,80208,yes,B-,100,,8.57
 19,25,44,K,44K,,22.13,m,1327.8,yes,B-,100,,8.54
@@ -310,8 +350,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 20,17,37,Ca,37Ca,,181,ms,0.181,yes,EC+B+,100,ECP 72%,8.0
 20,18,38,Ca,38Ca,,443.77,ms,0.44377,yes,EC+B+,100,,8.24
 20,19,39,Ca,39Ca,,860.3,ms,0.8603,yes,EC+B+,100,,8.36
+20,20,40,Ca,40Ca,,STABLE,,,stable,,,,
 20,21,41,Ca,41Ca,,99400.0,y,3136830000000.0,yes,EC,100,,8.54
+20,22,42,Ca,42Ca,,STABLE,,,stable,,,,
+20,23,43,Ca,43Ca,,STABLE,,,stable,,,,
+20,24,44,Ca,44Ca,,STABLE,,,stable,,,,
 20,25,45,Ca,45Ca,,162.61,d,14049500.0,yes,B-,100,,8.63
+20,26,46,Ca,46Ca,,STABLE,,,stable,,,,
 20,27,47,Ca,47Ca,,4.536,d,391910,yes,B-,100,,8.63
 20,28,48,Ca,48Ca,,5.6e+19,y,1.76723e+27,yes,2B-,,B-,8.66
 20,29,49,Ca,49Ca,,8.718,m,523.08,yes,B-,100,,8.59
@@ -332,7 +377,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 21,21,42,Sc,42Sc,,680.79,ms,0.68079,yes,EC+B+,100,,8.44
 21,22,43,Sc,43Sc,,3.891,h,14007.6,yes,EC+B+,100,,8.53
 21,23,44,Sc,44Sc,,4.042,h,14551.2,yes,EC+B+,100,,8.55
-21,24,45,Sc,45Sc,,325.8,ms,0.3258,yes,IT,100,,8.61
+21,24,45,Sc,45Sc,,STABLE,,,stable,,,,
 21,25,46,Sc,46Sc,,83.808,d,7241010.0,yes,B-,100,,8.62
 21,26,47,Sc,47Sc,,3.3491,d,289362,yes,B-,100,,8.66
 21,27,48,Sc,48Sc,,43.71,h,157356,yes,B-,100,,8.65
@@ -357,6 +402,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 22,21,43,Ti,43Ti,,509,ms,0.509,yes,EC+B+,100,ECP,8.35
 22,22,44,Ti,44Ti,,59.1,y,1865050000.0,yes,EC,100,,8.53
 22,23,45,Ti,45Ti,,184.8,m,11088,yes,EC+B+,100,,8.55
+22,24,46,Ti,46Ti,,STABLE,,,stable,,,,
+22,25,47,Ti,47Ti,,STABLE,,,stable,,,,
+22,26,48,Ti,48Ti,,STABLE,,,stable,,,,
+22,27,49,Ti,49Ti,,STABLE,,,stable,,,,
+22,28,50,Ti,50Ti,,STABLE,,,stable,,,,
 22,29,51,Ti,51Ti,,5.756,m,345.36,yes,B-,100,,8.7
 22,30,52,Ti,52Ti,,1.7,m,102,yes,B-,100,,8.69
 22,31,53,Ti,53Ti,,32.7,s,32.7,yes,B-,100,,8.63
@@ -380,6 +430,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 23,25,48,V,48V,,15.974,d,1380150.0,yes,EC+B+,100,,8.62
 23,26,49,V,49V,,330,d,28512000.0,yes,EC,100,,8.68
 23,27,50,V,50V,,2.68e+17,y,8.45744e+24,yes,EC+B+,98.6,B- 1.4%,8.69
+23,28,51,V,51V,,STABLE,,,stable,,,,
 23,29,52,V,52V,,3.743,m,224.58,yes,B-,100,,8.71
 23,30,53,V,53V,,1.537,m,92.22,yes,B-,100,,8.71
 23,31,54,V,54V,,49.8,s,49.8,yes,B-,100,,8.66
@@ -404,7 +455,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 24,23,47,Cr,47Cr,,460.6,ms,0.4606,yes,EC+B+,100,,8.4
 24,24,48,Cr,48Cr,,21.56,h,77616,yes,EC+B+,100,,8.57
 24,25,49,Cr,49Cr,,42.3,m,2538,yes,EC+B+,100,,8.61
+24,26,50,Cr,50Cr,,STABLE,,,stable,,,,
 24,27,51,Cr,51Cr,,27.7004,d,2393310.0,yes,EC,100,,8.71
+24,28,52,Cr,52Cr,,STABLE,,,stable,,,,
+24,29,53,Cr,53Cr,,STABLE,,,stable,,,,
+24,30,54,Cr,54Cr,,STABLE,,,stable,,,,
 24,31,55,Cr,55Cr,,3.498,m,209.88,yes,B-,100,,8.73
 24,32,56,Cr,56Cr,,5.94,m,356.4,yes,B-,100,,8.72
 24,33,57,Cr,57Cr,,21.1,s,21.1,yes,B-,100,,8.66
@@ -431,6 +486,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 25,27,52,Mn,52Mn,,5.591,d,483062,yes,EC+B+,100,,8.67
 25,28,53,Mn,53Mn,,3620000.0,y,114239000000000.0,yes,EC,100,,8.73
 25,29,54,Mn,54Mn,,312.1,d,26965400.0,yes,EC+B+,99.999907,B- 0.000093%,8.73
+25,30,55,Mn,55Mn,,STABLE,,,stable,,,,
 25,31,56,Mn,56Mn,,2.5788,h,9283.68,yes,B-,100,,8.73
 25,32,57,Mn,57Mn,,85.4,s,85.4,yes,B-,100,,8.73
 25,33,58,Mn,58Mn,,3,s,3,yes,B-,100,,8.69
@@ -458,7 +514,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 26,25,51,Fe,51Fe,,305,ms,0.305,yes,EC+B+,100,,8.46
 26,26,52,Fe,52Fe,,8.273,h,29782.8,yes,EC+B+,100,,8.6
 26,27,53,Fe,53Fe,,8.51,m,510.6,yes,EC+B+,100,,8.64
+26,28,54,Fe,54Fe,,STABLE,,,stable,,,,
 26,29,55,Fe,55Fe,,2.756,y,86972700.0,yes,EC,100,,8.74
+26,30,56,Fe,56Fe,,STABLE,,,stable,,,,
+26,31,57,Fe,57Fe,,STABLE,,,stable,,,,
+26,32,58,Fe,58Fe,,STABLE,,,stable,,,,
 26,33,59,Fe,59Fe,,44.495,d,3844370.0,yes,B-,100,,8.75
 26,34,60,Fe,60Fe,,2610000.0,y,82365300000000.0,yes,B-,100,,8.75
 26,35,61,Fe,61Fe,,6.03,m,361.8,yes,B-,100,,8.7
@@ -486,6 +546,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 27,29,56,Co,56Co,,77.236,d,6673190.0,yes,EC+B+,100,,8.69
 27,30,57,Co,57Co,,271.8,d,23483500.0,yes,EC,100,,8.74
 27,31,58,Co,58Co,,70.883,d,6124290.0,yes,EC+B+,100,,8.73
+27,32,59,Co,59Co,,STABLE,,,stable,,,,
 27,33,60,Co,60Co,,5.271,y,166340000.0,yes,B-,100,,8.74
 27,34,61,Co,61Co,,1.65,h,5940,yes,B-,100,,8.75
 27,35,62,Co,62Co,,1.51,m,90.6,yes,B-,100,,8.72
@@ -515,8 +576,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 28,27,55,Ni,55Ni,,203.9,ms,0.2039,yes,EC+B+,100,,8.49
 28,28,56,Ni,56Ni,,6.081,d,525398,yes,EC+B+,100,,8.64
 28,29,57,Ni,57Ni,,35.6,h,128160,yes,EC+B+,100,,8.67
+28,30,58,Ni,58Ni,,STABLE,,,stable,,,,
 28,31,59,Ni,59Ni,,81000.0,y,2556170000000.0,yes,EC+B+,100,,8.73
+28,32,60,Ni,60Ni,,STABLE,,,stable,,,,
+28,33,61,Ni,61Ni,,STABLE,,,stable,,,,
+28,34,62,Ni,62Ni,,STABLE,,,stable,,,,
 28,35,63,Ni,63Ni,,100.8,y,3181010000.0,yes,B-,100,,8.76
+28,36,64,Ni,64Ni,,STABLE,,,stable,,,,
 28,37,65,Ni,65Ni,,2.5175,h,9063,yes,B-,100,,8.73
 28,38,66,Ni,66Ni,,54.6,h,196560,yes,B-,100,,8.73
 28,39,67,Ni,67Ni,,21,s,21,yes,B-,100,,8.69
@@ -545,7 +611,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 29,31,60,Cu,60Cu,,23.74,m,1424.4,yes,EC+B+,100,,8.66
 29,32,61,Cu,61Cu,,3.339,h,12020.4,yes,EC+B+,100,,8.71
 29,33,62,Cu,62Cu,,9.672,m,580.32,yes,EC+B+,100,,8.71
+29,34,63,Cu,63Cu,,STABLE,,,stable,,,,
 29,35,64,Cu,64Cu,,12.7007,h,45722.5,yes,EC+B+,61.5,B- 38.5%,8.73
+29,36,65,Cu,65Cu,,STABLE,,,stable,,,,
 29,37,66,Cu,66Cu,,5.09,m,305.4,yes,B-,100,,8.73
 29,38,67,Cu,67Cu,,61.81,h,222516,yes,B-,100,,8.73
 29,39,68,Cu,68Cu,,30.8,s,30.8,yes,B-,100,,8.7
@@ -574,8 +642,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 30,31,61,Zn,61Zn,,88.8,s,88.8,yes,EC+B+,100,,8.61
 30,32,62,Zn,62Zn,,9.193,h,33094.8,yes,EC+B+,100,,8.67
 30,33,63,Zn,63Zn,,38.38,m,2302.8,yes,EC+B+,100,,8.68
+30,34,64,Zn,64Zn,,STABLE,,,stable,,,,
 30,35,65,Zn,65Zn,,243.93,d,21075600.0,yes,EC+B+,100,,8.72
+30,36,66,Zn,66Zn,,STABLE,,,stable,,,,
+30,37,67,Zn,67Zn,,STABLE,,,stable,,,,
+30,38,68,Zn,68Zn,,STABLE,,,stable,,,,
 30,39,69,Zn,69Zn,,56.4,m,3384,yes,B-,100,,8.72
+30,40,70,Zn,70Zn,,STABLE,,,stable,,,,
 30,41,71,Zn,71Zn,,2.42,m,145.2,yes,B-,100,,8.68
 30,42,72,Zn,72Zn,,46.5,h,167400,yes,B-,100,,8.69
 30,43,73,Zn,73Zn,,24.5,s,24.5,yes,B-,100,,8.64
@@ -601,7 +674,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 31,35,66,Ga,66Ga,,9.304,h,33494.4,yes,EC+B+,100,,8.66
 31,36,67,Ga,67Ga,,3.2615,d,281794,yes,EC,100,,8.7
 31,37,68,Ga,68Ga,,67.843,m,4070.58,yes,EC+B+,100,,8.7
+31,38,69,Ga,69Ga,,STABLE,,,stable,,,,
 31,39,70,Ga,70Ga,,21.14,m,1268.4,yes,B-,99.59,EC 0.41%,8.7
+31,40,71,Ga,71Ga,,STABLE,,,stable,,,,
 31,41,72,Ga,72Ga,,14.025,h,50490,yes,B-,100,,8.68
 31,42,73,Ga,73Ga,,4.87,h,17532,yes,B-,100,,8.69
 31,43,74,Ga,74Ga,,8.1,m,486,yes,B-,100,,8.66
@@ -629,8 +704,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 32,35,67,Ge,67Ge,,18.9,m,1134,yes,EC+B+,100,,8.63
 32,36,68,Ge,68Ge,,271.04,d,23417900.0,yes,EC,100,,8.68
 32,37,69,Ge,69Ge,,38.9,h,140040,yes,EC+B+,100,,8.68
+32,38,70,Ge,70Ge,,STABLE,,,stable,,,,
 32,39,71,Ge,71Ge,,11.42,d,986688,yes,EC,100,,8.7
-32,41,73,Ge,73Ge,,0.449,s,0.449,yes,IT,100,,8.7
+32,40,72,Ge,72Ge,,STABLE,,,stable,,,,
+32,41,73,Ge,73Ge,,STABLE,,,stable,,,,
+32,42,74,Ge,74Ge,,STABLE,,,stable,,,,
 32,43,75,Ge,75Ge,,82.78,m,4966.8,yes,B-,100,,8.69
 32,44,76,Ge,76Ge,,1.89e+21,y,5.96439e+28,yes,2B-,100,,8.7
 32,45,77,Ge,77Ge,,11.211,h,40359.6,yes,B-,100,,8.67
@@ -659,6 +737,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 33,39,72,As,72As,,26,h,93600,yes,EC+B+,100,,8.66
 33,40,73,As,73As,,80.3,d,6937920.0,yes,EC,100,,8.68
 33,41,74,As,74As,,17.78,d,1536190.0,yes,EC+B+,66,B- 34%,8.68
+33,42,75,As,75As,,STABLE,,,stable,,,,
 33,43,76,As,76As,,26.24,h,94464,yes,B-,100,,8.68
 33,44,77,As,77As,,38.79,h,139644,yes,B-,100,,8.69
 33,45,78,As,78As,,90.7,m,5442,yes,B-,100,,8.67
@@ -687,9 +766,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 34,37,71,Se,71Se,,4.78,m,286.8,yes,EC+B+,100,,8.58
 34,38,72,Se,72Se,,8.4,d,725760,yes,EC,100,,8.64
 34,39,73,Se,73Se,,7.18,h,25848,yes,EC+B+,100,,8.64
+34,40,74,Se,74Se,,STABLE,,,stable,,,,
 34,41,75,Se,75Se,,119.779,d,10348900.0,yes,EC,100,,8.67
-34,43,77,Se,77Se,,17.38,s,17.38,yes,IT,100,,8.69
+34,42,76,Se,76Se,,STABLE,,,stable,,,,
+34,43,77,Se,77Se,,STABLE,,,stable,,,,
+34,44,78,Se,78Se,,STABLE,,,stable,,,,
 34,45,79,Se,79Se,,327000.0,y,10319300000000.0,yes,B-,100,,8.69
+34,46,80,Se,80Se,,STABLE,,,stable,,,,
 34,47,81,Se,81Se,,18.5,m,1110,yes,B-,100,,8.68
 34,48,82,Se,82Se,,8.77e+19,y,2.7676e+27,yes,2B-,100,,8.69
 34,49,83,Se,83Se,,22.25,m,1335,yes,B-,100,,8.65
@@ -716,8 +799,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 35,41,76,Br,76Br,,16.16,h,58176,yes,EC+B+,100,,8.63
 35,42,77,Br,77Br,,57.04,h,205344,yes,EC+B+,100,,8.66
 35,43,78,Br,78Br,,6.45,m,387,yes,EC+B+,99.99,B- 0.01%,8.66
-35,44,79,Br,79Br,,4.85,s,4.85,yes,IT,100,,8.68
+35,44,79,Br,79Br,,STABLE,,,stable,,,,
 35,45,80,Br,80Br,,17.68,m,1060.8,yes,B-,91.7,EC+B+ 8.3%,8.67
+35,46,81,Br,81Br,,STABLE,,,stable,,,,
 35,47,82,Br,82Br,,35.284,h,127022,yes,B-,100,,8.68
 35,48,83,Br,83Br,,2.374,h,8546.4,yes,B-,100,,8.69
 35,49,84,Br,84Br,,31.76,m,1905.6,yes,B-,100,,8.67
@@ -746,10 +830,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 36,39,75,Kr,75Kr,,4.55,m,273,yes,EC+B+,100,,8.55
 36,40,76,Kr,76Kr,,14.8,h,53280,yes,EC+B+,100,,8.6
 36,41,77,Kr,77Kr,,71.25,m,4275,yes,EC+B+,100,,8.61
+36,42,78,Kr,78Kr,,STABLE,,,stable,,,,
 36,43,79,Kr,79Kr,,34.96,h,125856,yes,EC+B+,100,,8.65
+36,44,80,Kr,80Kr,,STABLE,,,stable,,,,
 36,45,81,Kr,81Kr,,229000.0,y,7226690000000.0,yes,EC,100,,8.68
-36,47,83,Kr,83Kr,,1.83,h,6588,yes,IT,100,,8.69
+36,46,82,Kr,82Kr,,STABLE,,,stable,,,,
+36,47,83,Kr,83Kr,,STABLE,,,stable,,,,
+36,48,84,Kr,84Kr,,STABLE,,,stable,,,,
 36,49,85,Kr,85Kr,,10.73,y,338613000.0,yes,B-,100,,8.69
+36,50,86,Kr,86Kr,,STABLE,,,stable,,,,
 36,51,87,Kr,87Kr,,76.09,m,4565.4,yes,B-,100,,8.67
 36,52,88,Kr,88Kr,,2.803,h,10090.8,yes,B-,100,,8.65
 36,53,89,Kr,89Kr,,3.147,m,188.82,yes,B-,100,,8.61
@@ -778,6 +867,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 37,45,82,Rb,82Rb,,1.2577,m,75.462,yes,EC+B+,100,,8.64
 37,46,83,Rb,83Rb,,86.2,d,7447680.0,yes,EC,100,,8.67
 37,47,84,Rb,84Rb,,32.82,d,2835650.0,yes,EC+B+,96.1,B- 3.9%,8.67
+37,48,85,Rb,85Rb,,STABLE,,,stable,,,,
 37,49,86,Rb,86Rb,,18.671,d,1613170.0,yes,B-,99.9948,EC 0.0052%,8.69
 37,50,87,Rb,87Rb,,49700000000.0,y,1.56841e+18,yes,B-,100,,8.71
 37,51,88,Rb,88Rb,,17.775,m,1066.5,yes,B-,100,,8.68
@@ -808,8 +898,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 38,43,81,Sr,81Sr,,22.29,m,1337.4,yes,EC+B+,100,,8.58
 38,44,82,Sr,82Sr,,25.35,d,2190240.0,yes,EC,100,,8.63
 38,45,83,Sr,83Sr,,32.41,h,116676,yes,EC+B+,100,,8.63
+38,46,84,Sr,84Sr,,STABLE,,,stable,,,,
 38,47,85,Sr,85Sr,,64.849,d,5602950.0,yes,EC,100,,8.67
-38,49,87,Sr,87Sr,,2.815,h,10134,yes,IT,99.7,EC 0.3%,8.7
+38,48,86,Sr,86Sr,,STABLE,,,stable,,,,
+38,49,87,Sr,87Sr,,STABLE,,,stable,,,,
+38,50,88,Sr,88Sr,,STABLE,,,stable,,,,
 38,51,89,Sr,89Sr,,50.56,d,4368380.0,yes,B-,100,,8.7
 38,52,90,Sr,90Sr,,28.91,y,912330000.0,yes,B-,100,,8.69
 38,53,91,Sr,91Sr,,9.68,h,34848,yes,B-,100,,8.66
@@ -842,7 +935,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 39,47,86,Y,86Y,,14.74,h,53064,yes,EC+B+,100,,8.63
 39,48,87,Y,87Y,,79.89,h,287604,yes,EC+B+,100,,8.67
 39,49,88,Y,88Y,,106.626,d,9212490.0,yes,EC+B+,100,,8.68
-39,50,89,Y,89Y,,15.663,s,15.663,yes,IT,100,,8.71
+39,50,89,Y,89Y,,STABLE,,,stable,,,,
 39,51,90,Y,90Y,,64.046,h,230566,yes,B-,100,,8.69
 39,52,91,Y,91Y,,58.56,d,5059580.0,yes,B-,100,,8.68
 39,53,92,Y,92Y,,3.54,h,12744,yes,B-,100,,8.66
@@ -876,8 +969,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 40,47,87,Zr,87Zr,,1.68,h,6048,yes,EC+B+,100,,8.62
 40,48,88,Zr,88Zr,,83.4,d,7205760.0,yes,EC,100,,8.66
 40,49,89,Zr,89Zr,,78.364,h,282110,yes,EC+B+,100,,8.67
-40,50,90,Zr,90Zr,,809.2,ms,0.8092,yes,IT,100,,8.7
+40,50,90,Zr,90Zr,,STABLE,,,stable,,,,
+40,51,91,Zr,91Zr,,STABLE,,,stable,,,,
+40,52,92,Zr,92Zr,,STABLE,,,stable,,,,
 40,53,93,Zr,93Zr,,1610000.0,y,50807700000000.0,yes,B-,100,,8.67
+40,54,94,Zr,94Zr,,STABLE,,,stable,,,,
 40,55,95,Zr,95Zr,,64.032,d,5532360.0,yes,B-,100,,8.64
 40,56,96,Zr,96Zr,,2.29e+19,y,7.22669e+26,yes,2B-,100,,8.63
 40,57,97,Zr,97Zr,,16.749,h,60296.4,yes,B-,100,,8.6
@@ -909,7 +1005,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 41,49,90,Nb,90Nb,,14.6,h,52560,yes,EC+B+,100,,8.63
 41,50,91,Nb,91Nb,,680,y,21459200000.0,yes,EC+B+,100,,8.67
 41,51,92,Nb,92Nb,,34700000.0,y,1095050000000000.0,yes,EC+B+,100,,8.66
-41,52,93,Nb,93Nb,,16.12,y,508709000.0,yes,IT,100,,8.66
+41,52,93,Nb,93Nb,,STABLE,,,stable,,,,
 41,53,94,Nb,94Nb,,20400.0,y,643775000000.0,yes,B-,100,,8.64
 41,54,95,Nb,95Nb,,34.991,d,3023220.0,yes,B-,100,,8.64
 41,55,96,Nb,96Nb,,23.35,h,84060,yes,B-,100,,8.62
@@ -944,7 +1040,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 42,47,89,Mo,89Mo,,2.04,m,122.4,yes,EC+B+,100,,8.54
 42,48,90,Mo,90Mo,,5.56,h,20016,yes,EC+B+,100,,8.59
 42,49,91,Mo,91Mo,,15.49,m,929.4,yes,EC+B+,100,,8.61
+42,50,92,Mo,92Mo,,STABLE,,,stable,,,,
 42,51,93,Mo,93Mo,,4000,y,126230000000.0,yes,EC,100,,8.65
+42,52,94,Mo,94Mo,,STABLE,,,stable,,,,
+42,53,95,Mo,95Mo,,STABLE,,,stable,,,,
+42,54,96,Mo,96Mo,,STABLE,,,stable,,,,
+42,55,97,Mo,97Mo,,STABLE,,,stable,,,,
+42,56,98,Mo,98Mo,,STABLE,,,stable,,,,
 42,57,99,Mo,99Mo,,65.936,h,237370,yes,B-,100,,8.6
 42,58,100,Mo,100Mo,,7.07e+18,y,2.23112e+26,yes,2B-,100,,8.6
 42,59,101,Mo,101Mo,,14.61,m,876.6,yes,B-,100,,8.57
@@ -1015,8 +1117,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 44,49,93,Ru,93Ru,,59.7,s,59.7,yes,EC+B+,100,,8.53
 44,50,94,Ru,94Ru,,52.1,m,3126,yes,EC+B+,100,,8.58
 44,51,95,Ru,95Ru,,1.6073,h,5786.28,yes,EC+B+,100,,8.58
+44,52,96,Ru,96Ru,,STABLE,,,stable,,,,
 44,53,97,Ru,97Ru,,2.8376,d,245169,yes,EC+B+,100,,8.6
+44,54,98,Ru,98Ru,,STABLE,,,stable,,,,
+44,55,99,Ru,99Ru,,STABLE,,,stable,,,,
+44,56,100,Ru,100Ru,,STABLE,,,stable,,,,
+44,57,101,Ru,101Ru,,STABLE,,,stable,,,,
+44,58,102,Ru,102Ru,,STABLE,,,stable,,,,
 44,59,103,Ru,103Ru,,39.247,d,3390940.0,yes,B-,100,,8.58
+44,60,104,Ru,104Ru,,STABLE,,,stable,,,,
 44,61,105,Ru,105Ru,,4.44,h,15984,yes,B-,100,,8.56
 44,62,106,Ru,106Ru,,371.8,d,32123500.0,yes,B-,100,,8.56
 44,63,107,Ru,107Ru,,3.73,m,223.8,yes,B-,100,,8.53
@@ -1052,7 +1161,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 45,55,100,Rh,100Rh,,20.5,h,73800,yes,EC+B+,100,,8.57
 45,56,101,Rh,101Rh,,4.07,y,128439000.0,yes,EC,100,,8.58
 45,57,102,Rh,102Rh,,207.3,d,17910700.0,yes,EC+B+,78,B- 22%,8.57
-45,58,103,Rh,103Rh,,56.118,m,3367.08,yes,IT,100,,8.58
+45,58,103,Rh,103Rh,,STABLE,,,stable,,,,
 45,59,104,Rh,104Rh,,42.3,s,42.3,yes,B-,99.55,EC+B+ 0.45%,8.56
 45,60,105,Rh,105Rh,,35.341,h,127228,yes,B-,100,,8.57
 45,61,106,Rh,106Rh,,30.07,s,30.07,yes,B-,100,,8.55
@@ -1090,9 +1199,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 46,53,99,Pd,99Pd,,21.4,m,1284,yes,EC+B+,100,,8.53
 46,54,100,Pd,100Pd,,3.63,d,313632,yes,EC,100,,8.56
 46,55,101,Pd,101Pd,,8.47,h,30492,yes,EC+B+,100,,8.56
+46,56,102,Pd,102Pd,,STABLE,,,stable,,,,
 46,57,103,Pd,103Pd,,17,d,1468800.0,yes,EC,100,,8.57
+46,58,104,Pd,104Pd,,STABLE,,,stable,,,,
+46,59,105,Pd,105Pd,,STABLE,,,stable,,,,
+46,60,106,Pd,106Pd,,STABLE,,,stable,,,,
 46,61,107,Pd,107Pd,,6500000.0,y,205124000000000.0,yes,B-,100,,8.56
+46,62,108,Pd,108Pd,,STABLE,,,stable,,,,
 46,63,109,Pd,109Pd,,13.437,h,48373.2,yes,B-,100,,8.54
+46,64,110,Pd,110Pd,,STABLE,,,stable,,,,
 46,65,111,Pd,111Pd,,23.6,m,1416,yes,B-,100,,8.52
 46,66,112,Pd,112Pd,,21.027,h,75697.2,yes,B-,100,,8.52
 46,67,113,Pd,113Pd,,89,s,89,yes,B-,100,,8.49
@@ -1129,9 +1244,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 47,57,104,Ag,104Ag,,69.3,m,4158,yes,EC+B+,100,,8.53
 47,58,105,Ag,105Ag,,41.29,d,3567460.0,yes,EC+B+,100,,8.55
 47,59,106,Ag,106Ag,,23.96,m,1437.6,yes,EC+B+,99,B- 1%,8.54
-47,60,107,Ag,107Ag,,44.2,s,44.2,yes,IT,100,,8.55
+47,60,107,Ag,107Ag,,STABLE,,,stable,,,,
 47,61,108,Ag,108Ag,,2.39,m,143.4,yes,B-,97.15,EC+B+ 2.85%,8.54
-47,62,109,Ag,109Ag,,39.8,s,39.8,yes,IT,100,,8.54
+47,62,109,Ag,109Ag,,STABLE,,,stable,,,,
 47,63,110,Ag,110Ag,,24.56,s,24.56,yes,B-,99.7,EC 0.3%,8.53
 47,64,111,Ag,111Ag,,7.421,d,641174,yes,B-,100,,8.53
 47,65,112,Ag,112Ag,,3.15,h,11340,yes,B-,100,,8.51
@@ -1167,10 +1282,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 48,55,103,Cd,103Cd,,7.5,m,450,yes,EC+B+,100,,8.48
 48,56,104,Cd,104Cd,,57.8,m,3468,yes,EC+B+,100,,8.51
 48,57,105,Cd,105Cd,,55.4,m,3324,yes,EC+B+,100,,8.51
+48,58,106,Cd,106Cd,,STABLE,,,stable,,,,
 48,59,107,Cd,107Cd,,6.52,h,23472,yes,EC+B+,100,,8.53
+48,60,108,Cd,108Cd,,STABLE,,,stable,,,,
 48,61,109,Cd,109Cd,,461.98,d,39915100.0,yes,EC,100,,8.53
-48,63,111,Cd,111Cd,,48.5,m,2910,yes,IT,100,,8.53
+48,62,110,Cd,110Cd,,STABLE,,,stable,,,,
+48,63,111,Cd,111Cd,,STABLE,,,stable,,,,
+48,64,112,Cd,112Cd,,STABLE,,,stable,,,,
 48,65,113,Cd,113Cd,,8040000000000000.0,y,2.53723e+23,yes,B-,100,,8.52
+48,66,114,Cd,114Cd,,STABLE,,,stable,,,,
 48,67,115,Cd,115Cd,,53.4,h,192240,yes,B-,100,,8.51
 48,68,116,Cd,116Cd,,2.68e+19,y,8.45744e+26,yes,2B-,100,,8.51
 48,69,117,Cd,117Cd,,2.503,h,9010.8,yes,B-,100,,8.48
@@ -1208,7 +1328,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 49,61,110,In,110In,,4.9,h,17640,yes,EC+B+,100,,8.5
 49,62,111,In,111In,,2.8048,d,242335,yes,EC,100,,8.52
 49,63,112,In,112In,,14.88,m,892.8,yes,EC+B+,62,B- 38%,8.51
-49,64,113,In,113In,,99.48,m,5968.8,yes,IT,100,,8.52
+49,64,113,In,113In,,STABLE,,,stable,,,,
 49,65,114,In,114In,,71.9,s,71.9,yes,B-,99.5,EC+B+ 0.5%,8.51
 49,66,115,In,115In,,441000000000000.0,y,1.39169e+22,yes,B-,100,,8.51
 49,67,116,In,116In,,14.1,s,14.1,yes,B-,99.9762,EC 0.0238%,8.5
@@ -1246,11 +1366,19 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 50,59,109,Sn,109Sn,,18.1,m,1086,yes,EC+B+,100,,8.47
 50,60,110,Sn,110Sn,,4.154,h,14954.4,yes,EC,100,,8.49
 50,61,111,Sn,111Sn,,35.3,m,2118,yes,EC+B+,100,,8.49
+50,62,112,Sn,112Sn,,STABLE,,,stable,,,,
 50,63,113,Sn,113Sn,,115.08,d,9942910.0,yes,EC+B+,100,,8.5
-50,67,117,Sn,117Sn,,13.94,d,1204420.0,yes,IT,100,,8.5
-50,69,119,Sn,119Sn,,293,d,25315200.0,yes,IT,100,,8.49
+50,64,114,Sn,114Sn,,STABLE,,,stable,,,,
+50,65,115,Sn,115Sn,,STABLE,,,stable,,,,
+50,66,116,Sn,116Sn,,STABLE,,,stable,,,,
+50,67,117,Sn,117Sn,,STABLE,,,stable,,,,
+50,68,118,Sn,118Sn,,STABLE,,,stable,,,,
+50,69,119,Sn,119Sn,,STABLE,,,stable,,,,
+50,70,120,Sn,120Sn,,STABLE,,,stable,,,,
 50,71,121,Sn,121Sn,,27.05,h,97380,yes,B-,100,,8.48
+50,72,122,Sn,122Sn,,STABLE,,,stable,,,,
 50,73,123,Sn,123Sn,,129.2,d,11162900.0,yes,B-,100,,8.46
+50,74,124,Sn,124Sn,,STABLE,,,stable,,,,
 50,75,125,Sn,125Sn,,9.634,d,832378,yes,B-,100,,8.44
 50,76,126,Sn,126Sn,,198000.0,y,6248400000000.0,yes,B-,100,,8.44
 50,77,127,Sn,127Sn,,2.1,h,7560,yes,B-,100,,8.42
@@ -1284,7 +1412,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 51,67,118,Sb,118Sb,,3.6,m,216,yes,EC+B+,100,,8.47
 51,68,119,Sb,119Sb,,38.2,h,137520,yes,EC,100,,8.48
 51,69,120,Sb,120Sb,,15.89,m,953.4,yes,EC+B+,100,,8.47
+51,70,121,Sb,121Sb,,STABLE,,,stable,,,,
 51,71,122,Sb,122Sb,,2.69413,d,232773,yes,B-,97.59,EC+B+ 2.41%,8.46
+51,72,123,Sb,123Sb,,STABLE,,,stable,,,,
 51,73,124,Sb,124Sb,,60.209,d,5202060.0,yes,B-,100,,8.45
 51,74,125,Sb,125Sb,,2.7577,y,87026400.0,yes,B-,100,,8.45
 51,75,126,Sb,126Sb,,12.3,d,1062720.0,yes,B-,100,,8.44
@@ -1320,9 +1450,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 52,65,117,Te,117Te,,62,m,3720,yes,EC+B+,100,,8.45
 52,66,118,Te,118Te,,6,d,518400,yes,EC,100,,8.46
 52,67,119,Te,119Te,,16.05,h,57780,yes,EC+B+,100,,8.46
+52,68,120,Te,120Te,,STABLE,,,stable,,,,
 52,69,121,Te,121Te,,19.27,d,1664930.0,yes,EC+B+,100,,8.46
-52,71,123,Te,123Te,,119.3,d,10307500.0,yes,IT,100,,8.46
-52,73,125,Te,125Te,,57.4,d,4959360.0,yes,IT,100,,8.45
+52,70,122,Te,122Te,,STABLE,,,stable,,,,
+52,71,123,Te,123Te,,STABLE,,,stable,,,,
+52,72,124,Te,124Te,,STABLE,,,stable,,,,
+52,73,125,Te,125Te,,STABLE,,,stable,,,,
+52,74,126,Te,126Te,,STABLE,,,stable,,,,
 52,75,127,Te,127Te,,9.35,h,33660,yes,B-,100,,8.44
 52,76,128,Te,128Te,,2.34e+24,y,7.38448e+31,yes,2B-,100,,8.44
 52,77,129,Te,129Te,,69.5,m,4170,yes,B-,100,,8.43
@@ -1361,6 +1495,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 53,71,124,I,124I,,4.176,d,360806,yes,EC+B+,100,,8.44
 53,72,125,I,125I,,59.398,d,5131990.0,yes,EC,100,,8.45
 53,73,126,I,126I,,12.93,d,1117150.0,yes,EC+B+,52.7,B- 47.3%,8.43
+53,74,127,I,127I,,STABLE,,,stable,,,,
 53,75,128,I,128I,,25,m,1500,yes,B-,93.1,EC+B+ 6.9%,8.43
 53,76,129,I,129I,,16100000.0,y,508077000000000.0,yes,B-,100,,8.43
 53,77,130,I,130I,,12.36,h,44496,yes,B-,100,,8.42
@@ -1397,12 +1532,17 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 54,67,121,Xe,121Xe,,39.1,m,2346,yes,EC+B+,100,,8.4
 54,68,122,Xe,122Xe,,20.1,h,72360,yes,EC,100,,8.42
 54,69,123,Xe,123Xe,,2.05,h,7380,yes,EC+B+,100,,8.42
+54,70,124,Xe,124Xe,,STABLE,,,stable,,,,
 54,71,125,Xe,125Xe,,16.962,h,61063.2,yes,EC+B+,100,,8.43
+54,72,126,Xe,126Xe,,STABLE,,,stable,,,,
 54,73,127,Xe,127Xe,,36.344,d,3140120.0,yes,EC,100,,8.43
-54,75,129,Xe,129Xe,,8.88,d,767232,yes,IT,100,,8.43
-54,77,131,Xe,131Xe,,11.931,d,1030840.0,yes,IT,100,,8.42
+54,74,128,Xe,128Xe,,STABLE,,,stable,,,,
+54,75,129,Xe,129Xe,,STABLE,,,stable,,,,
+54,76,130,Xe,130Xe,,STABLE,,,stable,,,,
+54,77,131,Xe,131Xe,,STABLE,,,stable,,,,
+54,78,132,Xe,132Xe,,STABLE,,,stable,,,,
 54,79,133,Xe,133Xe,,5.2474,d,453375,yes,B-,100,,8.41
-54,80,134,Xe,134Xe,,290,ms,0.29,yes,IT,100,,8.41
+54,80,134,Xe,134Xe,,STABLE,,,stable,,,,
 54,81,135,Xe,135Xe,,9.168,h,33004.8,yes,B-,100,,8.39
 54,82,136,Xe,136Xe,,2.19e+21,y,6.91111e+28,yes,2B-,100,,8.39
 54,83,137,Xe,137Xe,,3.821,m,229.26,yes,B-,100,,8.36
@@ -1440,6 +1580,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 55,75,130,Cs,130Cs,,29.2,m,1752,yes,EC+B+,98.4,B- 1.6%,8.4
 55,76,131,Cs,131Cs,,9.688,d,837043,yes,EC,100,,8.41
 55,77,132,Cs,132Cs,,6.48,d,559872,yes,EC+B+,98.13,B- 1.87%,8.4
+55,78,133,Cs,133Cs,,STABLE,,,stable,,,,
 55,79,134,Cs,134Cs,,2.0656,y,65185400.0,yes,B-,99.9997,EC 0.0003%,8.39
 55,80,135,Cs,135Cs,,1330000.0,y,41971600000000.0,yes,B-,100,,8.4
 55,81,136,Cs,136Cs,,13.01,d,1124060.0,yes,B-,100,,8.38
@@ -1475,11 +1616,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 56,71,127,Ba,127Ba,,12.8,m,768,yes,EC+B+,100,,8.37
 56,72,128,Ba,128Ba,,2.43,d,209952,yes,EC,100,,8.39
 56,73,129,Ba,129Ba,,2.23,h,8028,yes,EC+B+,100,,8.39
+56,74,130,Ba,130Ba,,STABLE,,,stable,,,,
 56,75,131,Ba,131Ba,,11.52,d,995328,yes,EC+B+,100,,8.39
+56,76,132,Ba,132Ba,,STABLE,,,stable,,,,
 56,77,133,Ba,133Ba,,10.536,y,332491000.0,yes,EC,100,,8.4
-56,79,135,Ba,135Ba,,28.12,h,101232,yes,IT,100,,8.39
-56,80,136,Ba,136Ba,,302.2,ms,0.3022,yes,IT,100,,8.4
-56,81,137,Ba,137Ba,,2.5518,m,153.108,yes,IT,100,,8.39
+56,78,134,Ba,134Ba,,STABLE,,,stable,,,,
+56,79,135,Ba,135Ba,,STABLE,,,stable,,,,
+56,80,136,Ba,136Ba,,STABLE,,,stable,,,,
+56,81,137,Ba,137Ba,,STABLE,,,stable,,,,
+56,82,138,Ba,138Ba,,STABLE,,,stable,,,,
 56,83,139,Ba,139Ba,,82.89,m,4973.4,yes,B-,100,,8.36
 56,84,140,Ba,140Ba,,12.7526,d,1101820.0,yes,B-,100,,8.35
 56,85,141,Ba,141Ba,,18.24,m,1094.4,yes,B-,100,,8.32
@@ -1516,6 +1661,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 57,79,136,La,136La,,9.87,m,592.2,yes,EC+B+,100,,8.37
 57,80,137,La,137La,,60000.0,y,1893460000000.0,yes,EC,100,,8.38
 57,81,138,La,138La,,103000000000.0,y,3.25043e+18,yes,EC+B+,65.5,B- 34.5%,8.37
+57,82,139,La,139La,,STABLE,,,stable,,,,
 57,83,140,La,140La,,40.284,h,145022,yes,B-,100,,8.35
 57,84,141,La,141La,,3.93,h,14148,yes,B-,100,,8.34
 57,85,142,La,142La,,91.8,m,5508,yes,B-,100,,8.32
@@ -1549,10 +1695,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 58,75,133,Ce,133Ce,,97,m,5820,yes,EC+B+,100,,8.34
 58,76,134,Ce,134Ce,,3.22,d,278208,yes,EC,100,,8.36
 58,77,135,Ce,135Ce,,17.7,h,63720,yes,EC+B+,100,,8.36
+58,78,136,Ce,136Ce,,STABLE,,,stable,,,,
 58,79,137,Ce,137Ce,,9.11,h,32796,yes,EC+B+,100,,8.36
-58,80,138,Ce,138Ce,,8.73,ms,0.00873,yes,IT,100,,8.37
+58,80,138,Ce,138Ce,,STABLE,,,stable,,,,
 58,81,139,Ce,139Ce,,137.64,d,11892100.0,yes,EC,100,,8.37
+58,82,140,Ce,140Ce,,STABLE,,,stable,,,,
 58,83,141,Ce,141Ce,,32.504,d,2808350.0,yes,B-,100,,8.35
+58,84,142,Ce,142Ce,,STABLE,,,stable,,,,
 58,85,143,Ce,143Ce,,33.037,h,118933,yes,B-,100,,8.32
 58,86,144,Ce,144Ce,,284.886,d,24614200.0,yes,B-,100,,8.31
 58,87,145,Ce,145Ce,,3.02,m,181.2,yes,B-,100,,8.28
@@ -1587,6 +1736,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 59,79,138,Pr,138Pr,,1.45,m,87,yes,EC+B+,100,,8.33
 59,80,139,Pr,139Pr,,4.41,h,15876,yes,EC+B+,100,,8.34
 59,81,140,Pr,140Pr,,3.39,m,203.4,yes,EC+B+,100,,8.34
+59,82,141,Pr,141Pr,,STABLE,,,stable,,,,
 59,83,142,Pr,142Pr,,19.12,h,68832,yes,B-,99.9836,EC 0.0164%,8.33
 59,84,143,Pr,143Pr,,13.57,d,1172450.0,yes,B-,100,,8.32
 59,85,144,Pr,144Pr,,17.28,m,1036.8,yes,B-,100,,8.31
@@ -1624,8 +1774,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 60,79,139,Nd,139Nd,,29.7,m,1782,yes,EC+B+,100,,8.32
 60,80,140,Nd,140Nd,,3.37,d,291168,yes,EC,100,,8.33
 60,81,141,Nd,141Nd,,2.49,h,8964,yes,EC+B+,100,,8.33
+60,82,142,Nd,142Nd,,STABLE,,,stable,,,,
+60,83,143,Nd,143Nd,,STABLE,,,stable,,,,
 60,84,144,Nd,144Nd,,2290000000000000.0,y,7.22669e+22,yes,A,100,,8.32
+60,85,145,Nd,145Nd,,STABLE,,,stable,,,,
+60,86,146,Nd,146Nd,,STABLE,,,stable,,,,
 60,87,147,Nd,147Nd,,11.12,d,960768,yes,B-,100,,8.28
+60,88,148,Nd,148Nd,,STABLE,,,stable,,,,
 60,89,149,Nd,149Nd,,1.728,h,6220.8,yes,B-,100,,8.25
 60,90,150,Nd,150Nd,,9.3e+18,y,2.93486e+26,yes,2B-,100,,8.24
 60,91,151,Nd,151Nd,,12.44,m,746.4,yes,B-,100,,8.23
@@ -1694,12 +1849,17 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 62,79,141,Sm,141Sm,,10.4,m,624,yes,EC+B+,100,,8.26
 62,80,142,Sm,142Sm,,72.48,m,4348.8,yes,EC+B+,100,,8.28
 62,81,143,Sm,143Sm,,8.83,m,529.8,yes,EC+B+,100,,8.28
+62,82,144,Sm,144Sm,,STABLE,,,stable,,,,
 62,83,145,Sm,145Sm,,340,d,29376000.0,yes,EC,100,,8.29
 62,84,146,Sm,146Sm,,68000000.0,y,2145920000000000.0,yes,A,100,,8.29
 62,85,147,Sm,147Sm,,107000000000.0,y,3.37666e+18,yes,A,100,,8.28
 62,86,148,Sm,148Sm,,6840000000000000.0,y,2.15854e+23,yes,A,100,,8.27
+62,87,149,Sm,149Sm,,STABLE,,,stable,,,,
+62,88,150,Sm,150Sm,,STABLE,,,stable,,,,
 62,89,151,Sm,151Sm,,94.6,y,2985350000.0,yes,B-,100,,8.24
+62,90,152,Sm,152Sm,,STABLE,,,stable,,,,
 62,91,153,Sm,153Sm,,46.283,h,166619,yes,B-,100,,8.22
+62,92,154,Sm,154Sm,,STABLE,,,stable,,,,
 62,93,155,Sm,155Sm,,22.182,m,1330.92,yes,B-,100,,8.21
 62,94,156,Sm,156Sm,,9.4,h,33840,yes,B-,100,,8.2
 62,95,157,Sm,157Sm,,8.04,m,482.4,yes,B-,100,,8.18
@@ -1736,6 +1896,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 63,87,150,Eu,150Eu,,36.6,y,1155010000.0,yes,EC+B+,100,,8.24
 63,88,151,Eu,151Eu,,4.6e+18,y,1.45165e+26,yes,A,100,,8.23
 63,89,152,Eu,152Eu,,13.517,y,426564000.0,yes,EC+B+,72.08,B- 27.92%,8.22
+63,90,153,Eu,153Eu,,STABLE,,,stable,,,,
 63,91,154,Eu,154Eu,,8.591,y,271111000.0,yes,B-,99.982,EC+B+ 0.018%,8.21
 63,92,155,Eu,155Eu,,4.742,y,149646000.0,yes,B-,100,,8.21
 63,93,156,Eu,156Eu,,15.16,d,1309820.0,yes,B-,100,,8.2
@@ -1773,7 +1934,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 64,87,151,Gd,151Gd,,124.5,d,10756800.0,yes,EC,100,A 8.00E-07%,8.23
 64,88,152,Gd,152Gd,,108000000000000.0,y,3.40822e+21,yes,A,100,,8.23
 64,89,153,Gd,153Gd,,240.41,d,20771400.0,yes,EC,100,,8.22
+64,90,154,Gd,154Gd,,STABLE,,,stable,,,,
+64,91,155,Gd,155Gd,,STABLE,,,stable,,,,
+64,92,156,Gd,156Gd,,STABLE,,,stable,,,,
+64,93,157,Gd,157Gd,,STABLE,,,stable,,,,
+64,94,158,Gd,158Gd,,STABLE,,,stable,,,,
 64,95,159,Gd,159Gd,,18.479,h,66524.4,yes,B-,100,,8.18
+64,96,160,Gd,160Gd,,STABLE,,,stable,,,,
 64,97,161,Gd,161Gd,,3.66,m,219.6,yes,B-,100,,8.16
 64,98,162,Gd,162Gd,,8.39,m,503.4,yes,B-,100,,8.15
 64,99,163,Gd,163Gd,,68,s,68,yes,B-,100,,8.14
@@ -1808,6 +1975,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 65,91,156,Tb,156Tb,,5.35,d,462240,yes,EC+B+,100,,8.19
 65,92,157,Tb,157Tb,,71,y,2240590000.0,yes,EC,100,,8.19
 65,93,158,Tb,158Tb,,180,y,5680370000.0,yes,EC+B+,83.4,B- 16.6%,8.18
+65,94,159,Tb,159Tb,,STABLE,,,stable,,,,
 65,95,160,Tb,160Tb,,72.3,d,6246720.0,yes,B-,100,,8.17
 65,96,161,Tb,161Tb,,6.9584,d,601206,yes,B-,100,,8.17
 65,97,162,Tb,162Tb,,7.6,m,456,yes,B-,100,,8.16
@@ -1840,8 +2008,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 66,87,153,Dy,153Dy,,6.42,h,23112,yes,EC+B+,99.9906,A 0.0094%,8.18
 66,88,154,Dy,154Dy,,2750000.0,y,86783400000000.0,yes,A,100,,8.19
 66,89,155,Dy,155Dy,,9.92,h,35712,yes,EC+B+,100,,8.18
+66,90,156,Dy,156Dy,,STABLE,,,stable,,,,
 66,91,157,Dy,157Dy,,8.14,h,29304,yes,EC+B+,100,,8.18
+66,92,158,Dy,158Dy,,STABLE,,,stable,,,,
 66,93,159,Dy,159Dy,,145.3,d,12553900.0,yes,EC,100,,8.18
+66,94,160,Dy,160Dy,,STABLE,,,stable,,,,
+66,95,161,Dy,161Dy,,STABLE,,,stable,,,,
+66,96,162,Dy,162Dy,,STABLE,,,stable,,,,
+66,97,163,Dy,163Dy,,STABLE,,,stable,,,,
+66,98,164,Dy,164Dy,,STABLE,,,stable,,,,
 66,99,165,Dy,165Dy,,2.331,h,8391.6,yes,B-,100,,8.14
 66,100,166,Dy,166Dy,,81.63,h,293868,yes,B-,100,,8.13
 66,101,167,Dy,167Dy,,6.2,m,372,yes,B-,100,,8.12
@@ -1879,6 +2054,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 67,95,162,Ho,162Ho,,15,m,900,yes,EC+B+,100,,8.15
 67,96,163,Ho,163Ho,,4570,y,144218000000.0,yes,EC,100,,8.15
 67,97,164,Ho,164Ho,,28.8,m,1728,yes,EC+B+,60,B- 40%,8.14
+67,98,165,Ho,165Ho,,STABLE,,,stable,,,,
 67,99,166,Ho,166Ho,,26.808,h,96508.8,yes,B-,100,,8.13
 67,100,167,Ho,167Ho,,2.9675,h,10683,yes,B-,100,,8.13
 67,101,168,Ho,168Ho,,2.99,m,179.4,yes,B-,100,,8.11
@@ -1911,10 +2087,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 68,91,159,Er,159Er,,36,m,2160,yes,EC+B+,100,,8.14
 68,92,160,Er,160Er,,28.58,h,102888,yes,EC,100,,8.15
 68,93,161,Er,161Er,,3.21,h,11556,yes,EC+B+,100,,8.14
+68,94,162,Er,162Er,,STABLE,,,stable,,,,
 68,95,163,Er,163Er,,75,m,4500,yes,EC+B+,100,,8.14
+68,96,164,Er,164Er,,STABLE,,,stable,,,,
 68,97,165,Er,165Er,,10.36,h,37296,yes,EC,100,,8.13
-68,99,167,Er,167Er,,2.269,s,2.269,yes,IT,100,,8.13
+68,98,166,Er,166Er,,STABLE,,,stable,,,,
+68,99,167,Er,167Er,,STABLE,,,stable,,,,
+68,100,168,Er,168Er,,STABLE,,,stable,,,,
 68,101,169,Er,169Er,,9.39,d,811296,yes,B-,100,,8.11
+68,102,170,Er,170Er,,STABLE,,,stable,,,,
 68,103,171,Er,171Er,,7.516,h,27057.6,yes,B-,100,,8.09
 68,104,172,Er,172Er,,49.3,h,177480,yes,B-,100,,8.09
 68,105,173,Er,173Er,,1.4,m,84,yes,B-,100,,8.07
@@ -1950,6 +2131,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 69,97,166,Tm,166Tm,,7.7,h,27720,yes,EC+B+,100,,8.11
 69,98,167,Tm,167Tm,,9.28,d,801792,yes,EC,100,,8.12
 69,99,168,Tm,168Tm,,93.1,d,8043840.0,yes,EC+B+,99.99,B- 0.01%,8.11
+69,100,169,Tm,169Tm,,STABLE,,,stable,,,,
 69,101,170,Tm,170Tm,,128.4,d,11093800.0,yes,B-,99.869,EC 0.131%,8.1
 69,102,171,Tm,171Tm,,701.5,d,60609600.0,yes,B-,100,,8.1
 69,103,172,Tm,172Tm,,63.6,h,228960,yes,B-,100,,8.09
@@ -1981,9 +2163,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 70,95,165,Yb,165Yb,,9.8,m,588,yes,EC+B+,100,,8.1
 70,96,166,Yb,166Yb,,56.7,h,204120,yes,EC,100,,8.11
 70,97,167,Yb,167Yb,,17.5,m,1050,yes,EC+B+,100,,8.1
+70,98,168,Yb,168Yb,,STABLE,,,stable,,,,
 70,99,169,Yb,169Yb,,32.015,d,2766100.0,yes,EC,100,,8.1
+70,100,170,Yb,170Yb,,STABLE,,,stable,,,,
+70,101,171,Yb,171Yb,,STABLE,,,stable,,,,
+70,102,172,Yb,172Yb,,STABLE,,,stable,,,,
+70,103,173,Yb,173Yb,,STABLE,,,stable,,,,
+70,104,174,Yb,174Yb,,STABLE,,,stable,,,,
 70,105,175,Yb,175Yb,,4.1615,d,359554,yes,B-,100,,8.07
-70,106,176,Yb,176Yb,,11.4,s,11.4,yes,IT,100,,8.06
+70,106,176,Yb,176Yb,,STABLE,,,stable,,,,
 70,107,177,Yb,177Yb,,1.911,h,6879.6,yes,B-,100,,8.04
 70,108,178,Yb,178Yb,,74,m,4440,yes,B-,100,,8.04
 70,109,179,Yb,179Yb,,8,m,480,yes,B-,100,,8.02
@@ -2018,6 +2206,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 71,101,172,Lu,172Lu,,6.702,d,579053,yes,EC+B+,100,,8.07
 71,102,173,Lu,173Lu,,1.37,y,43233900.0,yes,EC,100,,8.07
 71,103,174,Lu,174Lu,,3.31,y,104456000.0,yes,EC+B+,100,,8.07
+71,104,175,Lu,175Lu,,STABLE,,,stable,,,,
 71,105,176,Lu,176Lu,,37100000000.0,y,1.17079e+18,yes,B-,100,,8.05
 71,106,177,Lu,177Lu,,6.6472,d,574318,yes,B-,100,,8.05
 71,107,178,Lu,178Lu,,28.4,m,1704,yes,B-,100,,8.04
@@ -2054,10 +2243,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 72,101,173,Hf,173Hf,,23.6,h,84960,yes,EC+B+,100,,8.06
 72,102,174,Hf,174Hf,,7e+16,y,2.20903e+24,yes,A,100,,8.06
 72,103,175,Hf,175Hf,,70.67,d,6105890.0,yes,EC,100,,8.06
-72,105,177,Hf,177Hf,,1.09,s,1.09,yes,IT,100,,8.05
-72,106,178,Hf,178Hf,,4.3,s,4.3,yes,IT,100,,8.04
-72,107,179,Hf,179Hf,,18.67,s,18.67,yes,IT,100,,8.03
-72,108,180,Hf,180Hf,,5.528,h,19900.8,yes,IT,99.69,B- 0.31%,8.03
+72,104,176,Hf,176Hf,,STABLE,,,stable,,,,
+72,105,177,Hf,177Hf,,STABLE,,,stable,,,,
+72,106,178,Hf,178Hf,,STABLE,,,stable,,,,
+72,107,179,Hf,179Hf,,STABLE,,,stable,,,,
+72,108,180,Hf,180Hf,,STABLE,,,stable,,,,
 72,109,181,Hf,181Hf,,42.39,d,3662500.0,yes,B-,100,,8.02
 72,110,182,Hf,182Hf,,8900000.0,y,280863000000000.0,yes,B-,100,,8.01
 72,111,183,Hf,183Hf,,1.019,h,3668.4,yes,B-,100,,8.0
@@ -2094,6 +2284,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 73,105,178,Ta,178Ta,,2.41,h,8676,yes,EC+B+,100,IT 100%; EC+B+ 100%,8.03
 73,106,179,Ta,179Ta,,1.815,y,57277000.0,yes,EC,100,,8.03
 73,107,180,Ta,180Ta,,8.154,h,29354.4,yes,EC,85,B- 15%,8.02
+73,108,181,Ta,181Ta,,STABLE,,,stable,,,,
 73,109,182,Ta,182Ta,,114.804,d,9919070.0,yes,B-,100,,8.01
 73,110,183,Ta,183Ta,,5.1,d,440640,yes,B-,100,,8.0
 73,111,184,Ta,184Ta,,8.7,h,31320,yes,B-,100,,7.99
@@ -2132,8 +2323,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 74,105,179,W,179W,,37.05,m,2223,yes,EC+B+,100,,8.02
 74,106,180,W,180W,,1.59e+18,y,5.01766e+25,yes,A,100,,8.02
 74,107,181,W,181W,,120.96,d,10450900.0,yes,EC,100,,8.01
-74,109,183,W,183W,,5.36,s,5.36,yes,IT,100,,8.0
+74,108,182,W,182W,,STABLE,,,stable,,,,
+74,109,183,W,183W,,STABLE,,,stable,,,,
+74,110,184,W,184W,,STABLE,,,stable,,,,
 74,111,185,W,185W,,74.9,d,6471360.0,yes,B-,100,,7.99
+74,112,186,W,186W,,STABLE,,,stable,,,,
 74,113,187,W,187W,,23.8,h,85680,yes,B-,100,,7.97
 74,114,188,W,188W,,69.77,d,6028130.0,yes,B-,100,,7.96
 74,115,189,W,189W,,11.6,m,696,yes,B-,100,,7.95
@@ -2171,6 +2365,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 75,107,182,Re,182Re,,64.2,h,231120,yes,EC+B+,100,,7.99
 75,108,183,Re,183Re,,70,d,6048000.0,yes,EC,100,,8.0
 75,109,184,Re,184Re,,35.43,d,3061150.0,yes,EC+B+,100,,7.99
+75,110,185,Re,185Re,,STABLE,,,stable,,,,
 75,111,186,Re,186Re,,3.7185,d,321278,yes,B-,92.53,EC 7.47%,7.98
 75,112,187,Re,187Re,,41200000000.0,y,1.30017e+18,yes,B-,100,,7.97
 75,113,188,Re,188Re,,17.004,h,61214.4,yes,B-,100,,7.96
@@ -2211,10 +2406,12 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 76,108,184,Os,184Os,,11200000000000.0,y,3.53445e+20,yes,A,100,,7.98
 76,109,185,Os,185Os,,92.95,d,8030880.0,yes,EC,100,,7.98
 76,110,186,Os,186Os,,2000000000000000.0,y,6.31152e+22,yes,A,100,,7.98
-76,113,189,Os,189Os,,5.81,h,20916,yes,IT,100,,7.96
-76,114,190,Os,190Os,,9.86,m,591.6,yes,IT,100,,7.96
+76,111,187,Os,187Os,,STABLE,,,stable,,,,
+76,112,188,Os,188Os,,STABLE,,,stable,,,,
+76,113,189,Os,189Os,,STABLE,,,stable,,,,
+76,114,190,Os,190Os,,STABLE,,,stable,,,,
 76,115,191,Os,191Os,,15,d,1296000.0,yes,B-,100,,7.95
-76,116,192,Os,192Os,,6.1,s,6.1,yes,IT,100,,7.94
+76,116,192,Os,192Os,,STABLE,,,stable,,,,
 76,117,193,Os,193Os,,29.83,h,107388,yes,B-,100,,7.93
 76,118,194,Os,194Os,,6,y,189346000.0,yes,B-,100,,7.93
 76,119,195,Os,195Os,,6.4,m,384,yes,B-,100,,7.91
@@ -2253,9 +2450,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 77,111,188,Ir,188Ir,,41.5,h,149400,yes,EC+B+,100,,7.95
 77,112,189,Ir,189Ir,,13.2,d,1140480.0,yes,EC,100,,7.95
 77,113,190,Ir,190Ir,,11.78,d,1017790.0,yes,EC+B+,100,,7.94
-77,114,191,Ir,191Ir,,4.89,s,4.89,yes,IT,100,,7.94
+77,114,191,Ir,191Ir,,STABLE,,,stable,,,,
 77,115,192,Ir,192Ir,,73.826,d,6378570.0,yes,B-,95.24,EC 4.76%,7.93
-77,116,193,Ir,193Ir,,10.54,d,910656,yes,IT,100,,7.93
+77,116,193,Ir,193Ir,,STABLE,,,stable,,,,
 77,117,194,Ir,194Ir,,19.2,h,69120,yes,B-,100,,7.92
 77,118,195,Ir,195Ir,,2.29,h,8244,yes,B-,100,,7.92
 77,119,196,Ir,196Ir,,51.9,s,51.9,yes,B-,100,,7.91
@@ -2295,9 +2492,13 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 78,111,189,Pt,189Pt,,10.89,h,39204,yes,EC+B+,100,,7.94
 78,112,190,Pt,190Pt,,490000000000.0,y,1.54632e+19,yes,A,100,,7.94
 78,113,191,Pt,191Pt,,2.86,d,247104,yes,EC+B+,100,,7.93
+78,114,192,Pt,192Pt,,STABLE,,,stable,,,,
 78,115,193,Pt,193Pt,,50,y,1577880000.0,yes,EC,100,,7.93
-78,117,195,Pt,195Pt,,4.01,d,346464,yes,IT,100,,7.92
+78,116,194,Pt,194Pt,,STABLE,,,stable,,,,
+78,117,195,Pt,195Pt,,STABLE,,,stable,,,,
+78,118,196,Pt,196Pt,,STABLE,,,stable,,,,
 78,119,197,Pt,197Pt,,19.8915,h,71609.4,yes,B-,100,,7.91
+78,120,198,Pt,198Pt,,STABLE,,,stable,,,,
 78,121,199,Pt,199Pt,,30.51,m,1830.6,yes,B-,100,,7.9
 78,122,200,Pt,200Pt,,12.6,h,45360,yes,B-,100,,7.89
 78,123,201,Pt,201Pt,,2.5,m,150,yes,B-,100,,7.88
@@ -2335,7 +2536,7 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 79,115,194,Au,194Au,,38.06,h,137016,yes,EC+B+,100,,7.91
 79,116,195,Au,195Au,,186.01,d,16071300.0,yes,EC,100,,7.92
 79,117,196,Au,196Au,,6.156,d,531878,yes,EC+B+,93,B- 7%,7.91
-79,118,197,Au,197Au,,7.73,s,7.73,yes,IT,100,,7.91
+79,118,197,Au,197Au,,STABLE,,,stable,,,,
 79,119,198,Au,198Au,,2.69469,d,232821,yes,B-,100,,7.9
 79,120,199,Au,199Au,,3.135,d,270864,yes,B-,100,,7.9
 79,121,200,Au,200Au,,48.4,m,2904,yes,B-,100,,7.89
@@ -2375,9 +2576,15 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 80,113,193,Hg,193Hg,,3.8,h,13680,yes,EC+B+,100,,7.9
 80,114,194,Hg,194Hg,,447,y,14106200000.0,yes,EC,100,,7.91
 80,115,195,Hg,195Hg,,10.68,h,38448,yes,EC+B+,100,,7.9
+80,116,196,Hg,196Hg,,STABLE,,,stable,,,,
 80,117,197,Hg,197Hg,,64.96,h,233856,yes,EC+B+,100,,7.9
-80,119,199,Hg,199Hg,,42.66,m,2559.6,yes,IT,100,,7.9
+80,118,198,Hg,198Hg,,STABLE,,,stable,,,,
+80,119,199,Hg,199Hg,,STABLE,,,stable,,,,
+80,120,200,Hg,200Hg,,STABLE,,,stable,,,,
+80,121,201,Hg,201Hg,,STABLE,,,stable,,,,
+80,122,202,Hg,202Hg,,STABLE,,,stable,,,,
 80,123,203,Hg,203Hg,,46.612,d,4027280.0,yes,B-,100,,7.88
+80,124,204,Hg,204Hg,,STABLE,,,stable,,,,
 80,125,205,Hg,205Hg,,5.1,m,306,yes,B-,100,,7.87
 80,126,206,Hg,206Hg,,8.32,m,499.2,yes,B-,100,,7.86
 80,127,207,Hg,207Hg,,2.9,m,174,yes,B-,100,,7.84
@@ -2417,7 +2624,9 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 81,119,200,Tl,200Tl,,26.1,h,93960,yes,EC+B+,100,,7.88
 81,120,201,Tl,201Tl,,3.0421,d,262837,yes,EC,100,,7.89
 81,121,202,Tl,202Tl,,12.4706,d,1077460.0,yes,EC,100,,7.88
+81,122,203,Tl,203Tl,,STABLE,,,stable,,,,
 81,123,204,Tl,204Tl,,3.7833,y,119392000.0,yes,B-,97.08,EC+B+ 2.92%,7.88
+81,124,205,Tl,205Tl,,STABLE,,,stable,,,,
 81,125,206,Tl,206Tl,,4.202,m,252.12,yes,B-,100,,7.87
 81,126,207,Tl,207Tl,,4.77,m,286.2,yes,B-,100,,7.86
 81,127,208,Tl,208Tl,,3.053,m,183.18,yes,B-,100,,7.84
@@ -2456,9 +2665,11 @@ Z,N,A,Symbol,Nuclide,Half-life qualifier,Half-life,Unit,Half-life (s),Half-life 
 82,119,201,Pb,201Pb,,9.33,h,33588,yes,EC+B+,100,,7.87
 82,120,202,Pb,202Pb,,52500.0,y,1656770000000.0,yes,EC,100,,7.88
 82,121,203,Pb,203Pb,,51.93,h,186948,yes,EC,100,,7.87
-82,122,204,Pb,204Pb,,66.9,m,4014,yes,IT,100,,7.87
+82,122,204,Pb,204Pb,,STABLE,,,stable,,,,
 82,123,205,Pb,205Pb,,17000000.0,y,536479000000000.0,yes,EC,100,,7.87
-82,125,207,Pb,207Pb,,0.806,s,0.806,yes,IT,100,,7.86
+82,124,206,Pb,206Pb,,STABLE,,,stable,,,,
+82,125,207,Pb,207Pb,,STABLE,,,stable,,,,
+82,126,208,Pb,208Pb,,STABLE,,,stable,,,,
 82,127,209,Pb,209Pb,,3.235,h,11646,yes,B-,100,,7.84
 82,128,210,Pb,210Pb,,22.2,y,700579000.0,yes,B-,100,A 0.0000019%,7.83
 82,129,211,Pb,211Pb,,36.165,m,2169.9,yes,B-,100,,7.81
