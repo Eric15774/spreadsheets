@@ -10,6 +10,7 @@ Half-lives, decay modes and binding energies for 3,358 nuclides: 3,105 radioacti
 | `data/nuclides_student_view.csv` | One row per nuclide (ground state), stable ones included, 14 columns |
 | `data/nuclides_clean.csv` | Every source row, cleaned, 66 columns |
 | `data/Nuclides2024_raw.csv` | Original IAEA export, unchanged |
+| `screensaver/index.html` | Animated chart of the nuclides that zooms in on random nuclides. Live at https://eric15774.github.io/spreadsheets/nuclides/screensaver/ |
 
 ## Source
 
