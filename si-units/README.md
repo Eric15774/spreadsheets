@@ -1,6 +1,6 @@
 # SI Units and Prefixes Screensaver
 
-An animated chart of the International System of Units. It zooms in on a random tile and shows a card with key facts and real-world examples.
+An animated wheel of the International System of Units: base units in the inner ring, derived units in the middle ring, and the prefixes as a dial around the outside. It zooms in on a random tile and shows a card with key facts and real-world examples.
 
 Live page: https://eric15774.github.io/spreadsheets/si-units/screensaver/
 

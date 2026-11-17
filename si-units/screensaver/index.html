@@ -40,6 +40,8 @@
   #title { position: fixed; left: 24px; top: 18px; transition: opacity 1s; pointer-events: none; }
   #title h2 { margin: 0; font-size: 22px; font-weight: 800; }
   #title div { font-size: 13px; color: #8b96ad; margin-top: 3px; }
+  #title .key { margin-top: 6px; color: #b9c2d4; }
+  #title .key span { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: -1px; }
   #fs { position: fixed; right: 16px; top: 14px; background: rgba(255,255,255,.1); color: #e9edf5; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; padding: 7px 12px; font: 600 13px Inter, Arial, sans-serif; cursor: pointer; transition: opacity .6s; }
   body.idle #fs { opacity: 0; pointer-events: none; }
   #hint { position: fixed; left: 24px; bottom: 16px; font-size: 12px; color: #6f7a92; transition: opacity .6s; }
@@ -48,7 +50,10 @@
 </head>
 <body>
 <canvas id="c"></canvas>
-<div id="title"><h2>SI Units and Prefixes</h2><div>The International System of Units, from quecto to quetta</div></div>
+<div id="title"><h2>SI Units and Prefixes</h2><div>The International System of Units, from quecto to quetta</div>
+<div class="key"><span style="background:#8fd18a"></span>Inner ring: the 7 base units</div>
+<div class="key"><span style="background:#b9a4f2"></span>Middle ring: derived units with special names</div>
+<div class="key"><span style="background:linear-gradient(90deg,#78b4f5,#ebebf0,#f5aa64)"></span>Outer ring: prefixes</div></div>
 <div id="card"></div>
 <button id="fs" type="button">Full screen</button>
 <div id="hint">Click or press Space for the next one</div>
@@ -121,12 +126,22 @@ const DERIVED = [
 ];
 
 // ---------- items & layout ----------
-// grid: 25 columns. Row 1 prefixes, row 3 base units, rows 5-6 derived units.
+// Three rings around a centre hub: base units inside, derived units in the middle,
+// prefixes on the outside as a dial (no prefix at the top, smaller to the left, larger to the right).
+const R_BASE = 2.15, R_DER = 4.4, R_PRE = 6.75;
 const ITEMS = [];
-PREFIXES.forEach((p, i) => ITEMS.push({ kind: "prefix", x: i, y: 0.8, sym: p[2] === "1" ? "–" : p[2], name: p[1], exp: p[0], year: p[3], origin: p[4], ex: p[5] }));
-BASE.forEach((b, i) => ITEMS.push({ kind: "base", x: 9 + i, y: 3.3, sym: b[0], name: b[1], measures: b[2], def: b[3], ex: b[4] }));
-DERIVED.forEach((d, i) => ITEMS.push({ kind: "derived", x: 7 + (i % 11), y: 5.8 + Math.floor(i / 11) * 1.05, sym: d[0], name: d[1], measures: d[2], eq: d[3], after: d[4], ex: [d[5]] }));
-const COLS = 25, ROWS = 7.85;
+PREFIXES.forEach((p, i) => ITEMS.push({ kind: "prefix", ring: R_PRE, a0: (i - 12) * 2 * Math.PI / 26, sym: p[2] === "1" ? "–" : p[2], name: p[1], exp: p[0], year: p[3], origin: p[4], ex: p[5] }));
+BASE.forEach((b, i) => ITEMS.push({ kind: "base", ring: R_BASE, a0: i * 2 * Math.PI / 7, sym: b[0], name: b[1], measures: b[2], def: b[3], ex: b[4] }));
+DERIVED.forEach((d, i) => ITEMS.push({ kind: "derived", ring: R_DER, a0: i * 2 * Math.PI / 22, sym: d[0], name: d[1], measures: d[2], eq: d[3], after: d[4], ex: [d[5]] }));
+let rot = 0; // inner rings turn slowly while the whole wheel is in view
+function layout() {
+  for (const it of ITEMS) {
+    const a = it.a0 + (it.kind === "base" ? rot : it.kind === "derived" ? -rot * 0.6 : 0);
+    it.x = it.ring * Math.sin(a) - 0.5; it.y = -it.ring * Math.cos(a) - 0.5;
+  }
+}
+layout();
+const EXTENT = R_PRE + 0.6;
 const KIND = {
   prefix: { label: "Prefix", color: null },
   base: { label: "SI base unit", color: "#8fd18a" },
@@ -162,10 +177,12 @@ function resize() {
 }
 window.addEventListener("resize", resize); resize();
 function overviewCam() {
-  const L = 20, R = 20, Tp = 80, B = 44;
-  const s = Math.min((W - L - R) / COLS, (H - Tp - B) / ROWS);
+  const narrow = W < 700;
+  const L = 16, R = 16, Tp = narrow ? 130 : 30, B = 30;
+  const span = 2 * EXTENT + 1.2; // room for the label above the dial
+  const s = Math.min((W - L - R) / (2 * EXTENT), (H - Tp - B) / span);
   const bx = (L + W - R) / 2, by = (Tp + H - B) / 2;
-  return { cx: COLS / 2 - (bx - W / 2) / s, cy: ROWS / 2 - (by - H / 2) / s, s };
+  return { cx: 0 - (bx - W / 2) / s, cy: -0.6 - (by - H / 2) / s, s };
 }
 function landscape() { return W > 760 && W > H; }
 function closeScale() { return landscape() ? Math.min(W / 7, H / 4.6) : Math.min(W / 3.6, H / 7); }
@@ -184,17 +201,24 @@ function draw(cam, target, glow, dim, overlay) {
   ctx.fillStyle = "#0b1020"; ctx.fillRect(0, 0, W, H);
   const s = cam.s, gap = Math.max(1.5, s * 0.07), r = Math.max(2, s * 0.08);
   ctx.textAlign = "center";
-  // section headings
-  ctx.fillStyle = `rgba(170,180,200,${0.8 - 0.7 * dim})`;
-  const hs = Math.max(10, Math.round(s * 0.24));
-  ctx.font = `700 ${hs}px Inter, Arial`;
-  for (const [x, y, t] of [[12.5, 0.55, "PREFIXES"], [12.5, 3.05, "THE 7 BASE UNITS"], [12.5, 5.55, "DERIVED UNITS WITH SPECIAL NAMES"]]) {
-    const [hx, hy] = toScreen(x, y, cam); ctx.fillText(t, hx, hy);
+  // ring guides and hub
+  const [hx, hy] = toScreen(0, 0, cam);
+  ctx.lineWidth = Math.max(1, s * 0.03);
+  for (const [R, col] of [[R_BASE, "143,209,138"], [R_DER, "185,164,242"], [R_PRE, "200,205,220"]]) {
+    ctx.strokeStyle = `rgba(${col},${0.22 - 0.12 * dim})`;
+    ctx.beginPath(); ctx.arc(hx, hy, R * s, 0, 6.283); ctx.stroke();
   }
-  ctx.font = `600 ${Math.max(9, Math.round(s * 0.2))}px Inter, Arial`;
-  let [ax, ay] = toScreen(0, 0.55, cam); ctx.textAlign = "left"; ctx.fillText("← smaller", ax, ay);
-  [ax, ay] = toScreen(25, 0.55, cam); ctx.textAlign = "right"; ctx.fillText("larger →", ax, ay);
-  ctx.textAlign = "center";
+  const hubR = s * 0.95;
+  const hg = ctx.createRadialGradient(hx, hy, 0, hx, hy, hubR);
+  hg.addColorStop(0, "rgba(255,255,255,0.16)"); hg.addColorStop(1, "rgba(255,255,255,0.04)");
+  ctx.fillStyle = hg; ctx.beginPath(); ctx.arc(hx, hy, hubR, 0, 6.283); ctx.fill();
+  ctx.fillStyle = `rgba(233,237,245,${0.95 - 0.6 * dim})`;
+  ctx.font = `800 ${Math.round(s * 0.62)}px Inter, Arial`; ctx.fillText("SI", hx, hy + s * 0.2);
+  // dial direction label above "no prefix"
+  ctx.fillStyle = `rgba(170,180,200,${0.8 - 0.7 * dim})`;
+  ctx.font = `600 ${Math.max(9, Math.round(s * 0.22))}px Inter, Arial`;
+  const [lx, ly] = toScreen(0, -R_PRE - 0.75, cam);
+  ctx.fillText("← smaller      larger →", lx, ly);
 
   for (const it of ITEMS) {
     const [sx, sy] = toScreen(it.x, it.y, cam);
@@ -287,8 +311,11 @@ function camAt(u) {
   return { cx: P[0] - q[0] / s, cy: P[1] - q[1] / s, s };
 }
 const titleEl = document.getElementById("title");
+let lastNow = performance.now();
 function frame(now) {
   const el = now - t0;
+  if (phase === "overview") rot += Math.min(0.05, (now - lastNow) / 1000) * 0.07;
+  lastNow = now; layout();
   let cam, glow = 0, overlay = 0, dim = 0;
   if (phase === "overview") {
     cam = overviewCam(); overlay = 1;
