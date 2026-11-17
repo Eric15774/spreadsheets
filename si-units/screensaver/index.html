@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SI Units and Prefixes Screensaver</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; height: 100%; background: #0b1020; overflow: hidden; font-family: Inter, Arial, sans-serif; color: #e9edf5; }
+  canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  body.idle { cursor: none; }
+  #card {
+    position: fixed; width: min(470px, 90vw); box-sizing: border-box; padding: 24px 26px 22px;
+    background: rgba(13, 19, 38, 0.97); border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    opacity: 0; transform: translateY(12px); transition: opacity .7s, transform .7s; pointer-events: none;
+  }
+  #card.show { opacity: 1; transform: none; }
+  #card.right { right: 4vw; top: 50%; transform: translateY(calc(-50% + 12px)); }
+  #card.right.show { transform: translateY(-50%); }
+  #card.bottom { left: 0; right: 0; margin: 0 auto; bottom: 2vh; width: min(460px, 94vw); padding: 18px 18px 16px; }
+  .head { display: flex; align-items: center; gap: 16px; }
+  .tile { min-width: 78px; height: 78px; padding: 0 8px; box-sizing: border-box; border-radius: 10px; color: #141822; display: flex; align-items: center; justify-content: center; font-size: 38px; font-weight: 800; flex: none; }
+  .head h1 { margin: 0; font-size: 30px; font-weight: 800; }
+  .chip { display: inline-block; font-size: 13px; font-weight: 600; padding: 3px 9px; border-radius: 99px; color: #141822; margin-top: 6px; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; margin-top: 18px; }
+  .full { grid-column: 1 / -1; }
+  .label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #8b96ad; margin-bottom: 3px; }
+  .val { font-size: 17px; font-weight: 600; }
+  .txt { font-size: 15px; color: #d3d9e4; line-height: 1.4; }
+  .ex { margin-top: 16px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 14px; }
+  .ex ul { margin: 4px 0 0; padding-left: 18px; }
+  .ex li { font-size: 15px; color: #d3d9e4; margin: 4px 0; line-height: 1.4; }
+  #card.bottom .head h1 { font-size: 24px; }
+  #card.bottom .facts { gap: 8px 14px; margin-top: 12px; }
+  #card.bottom .val { font-size: 15px; }
+  #card.bottom .txt, #card.bottom .ex li { font-size: 14px; }
+  #card.bottom .ex { margin-top: 10px; padding-top: 10px; }
+  #title { position: fixed; left: 24px; top: 18px; transition: opacity 1s; pointer-events: none; }
+  #title h2 { margin: 0; font-size: 22px; font-weight: 800; }
+  #title div { font-size: 13px; color: #8b96ad; margin-top: 3px; }
+  #fs { position: fixed; right: 16px; top: 14px; background: rgba(255,255,255,.1); color: #e9edf5; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; padding: 7px 12px; font: 600 13px Inter, Arial, sans-serif; cursor: pointer; transition: opacity .6s; }
+  body.idle #fs { opacity: 0; pointer-events: none; }
+  #hint { position: fixed; left: 24px; bottom: 16px; font-size: 12px; color: #6f7a92; transition: opacity .6s; }
+  body.idle #hint { opacity: 0; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="title"><h2>SI Units and Prefixes</h2><div>The International System of Units, from quecto to quetta</div></div>
+<div id="card"></div>
+<button id="fs" type="button">Full screen</button>
+<div id="hint">Click or press Space for the next one</div>
+<script>
+// ---------- data ----------
+// prefixes: [exponent, name, symbol, year adopted, origin, examples]
+const PREFIXES = [
+  [-30, "quecto", "q", 2022, "Loosely from the Latin decem and Greek deka, meaning ten, because it is 1000 to the 10th power. The letter q was one of the few left unused.", ["An electron's mass is about 911 quectograms.", "Added in 2022, partly to be ready for future science."]],
+  [-27, "ronto", "r", 2022, "Loosely from the Greek ennea, meaning nine, because it is 1000 to the 9th power.", ["An electron's mass is about 0.91 rontograms.", "Added in 2022, the newest prefixes alongside quecto, ronna and quetta."]],
+  [-24, "yocto", "y", 1991, "From the Greek okto, meaning eight (1000 to the 8th power).", ["A proton's mass is about 1.67 yoctograms.", "A hydrogen atom has almost the same mass."]],
+  [-21, "zepto", "z", 1991, "From the Latin septem, meaning seven (1000 to the 7th power).", ["Light takes about 247 zeptoseconds to cross a hydrogen molecule, measured in 2020."]],
+  [-18, "atto", "a", 1964, "From the Danish atten, meaning eighteen.", ["Attosecond laser pulses can film electrons moving inside atoms. This work won the 2023 Nobel Prize in Physics."]],
+  [-15, "femto", "f", 1964, "From the Danish femten, meaning fifteen.", ["A proton is about 1.7 femtometers across.", "Femtosecond lasers are used in LASIK eye surgery."]],
+  [-12, "pico", "p", 1960, "From the Spanish pico, meaning a small amount.", ["Atoms are roughly 100 to 500 picometers across.", "Small capacitors in radios are rated in picofarads (pF)."]],
+  [-9, "nano", "n", 1960, "From the Greek nanos, meaning dwarf.", ["A DNA strand is about 2 nanometers wide.", "Visible light has wavelengths from about 400 to 700 nm."]],
+  [-6, "micro", "µ", 1960, "From the Greek mikros, meaning small. Its symbol is the Greek letter mu.", ["A human hair is about 50 to 100 micrometers thick.", "A red blood cell is about 7 µm across."]],
+  [-3, "milli", "m", 1795, "From the Latin mille, meaning thousand.", ["A credit card is about 0.76 millimeters thick.", "A medicine dose of 5 mL is one teaspoon."]],
+  [-2, "centi", "c", 1795, "From the Latin centum, meaning hundred.", ["A centimeter is about the width of a fingernail.", "A U.S. penny is 1.9 cm across."]],
+  [-1, "deci", "d", 1795, "From the Latin decimus, meaning tenth.", ["The decibel (dB), used for sound levels, is one tenth of a bel.", "European recipes often use deciliters (dL)."]],
+  [0, "(no prefix)", "1", null, "The unit itself, with nothing added.", ["One meter is about the height of a kitchen counter.", "One kilogram (the only base unit with a prefix built in) is a liter of water."]],
+  [1, "deca", "da", 1795, "From the Greek deka, meaning ten. It is the only prefix with a two-letter symbol.", ["Rarely used today. A decameter is 10 meters, about the length of a school bus."]],
+  [2, "hecto", "h", 1795, "From the Greek hekaton, meaning hundred.", ["Weather maps give air pressure in hectopascals. Sea level is about 1013 hPa.", "A hectare (100 m by 100 m) is about 2.5 acres."]],
+  [3, "kilo", "k", 1795, "From the Greek chilioi, meaning thousand.", ["A kilometer is about 0.62 miles.", "A loaded tractor-trailer can weigh up to about 36,000 kilograms (80,000 lb)."]],
+  [6, "mega", "M", 1960, "From the Greek megas, meaning great.", ["FM radio stations broadcast from 88 to 108 megahertz.", "Earth's radius is about 6.4 megameters (6,400 km)."]],
+  [9, "giga", "G", 1960, "From the Greek gigas, meaning giant.", ["Computer processors run at a few gigahertz.", "The Sun is about 150 gigameters (150 million km) from Earth."]],
+  [12, "tera", "T", 1960, "From the Greek teras, meaning monster.", ["A typical laptop hard drive holds 1 or 2 terabytes.", "The United States uses about 4,000 terawatt-hours of electricity a year."]],
+  [15, "peta", "P", 1975, "From the Greek penta, meaning five (1000 to the 5th power).", ["One light-year is about 9.5 petameters.", "Large data centers store many petabytes."]],
+  [18, "exa", "E", 1975, "From the Greek hex, meaning six (1000 to the 6th power).", ["Exascale supercomputers do over a quintillion (10¹⁸) calculations per second. The first, Frontier, came online in 2022."]],
+  [21, "zetta", "Z", 1991, "From the Latin septem, meaning seven (1000 to the 7th power).", ["All the digital data in the world is estimated at well over 100 zettabytes."]],
+  [24, "yotta", "Y", 1991, "From the Greek okto, meaning eight (1000 to the 8th power).", ["All the water in Earth's oceans has a mass of about 1.4 yottagrams.", "The Moon's mass is about 73 yottagrams."]],
+  [27, "ronna", "R", 2022, "Loosely from the Greek ennea, meaning nine (1000 to the 9th power).", ["Earth's mass is about 6 ronnagrams.", "Added in 2022, partly because data storage was heading toward this size."]],
+  [30, "quetta", "Q", 2022, "Loosely from the Latin decem and Greek deka, meaning ten (1000 to the 10th power).", ["Jupiter's mass is about 1.9 quettagrams.", "The Sun's mass is about 2,000 quettagrams."]]
+];
+const WORDS = { 30: "nonillion", 27: "octillion", 24: "septillion", 21: "sextillion", 18: "quintillion", 15: "quadrillion", 12: "trillion", 9: "billion", 6: "million", 3: "thousand", 2: "hundred", 1: "ten", 0: "one", "-1": "one tenth", "-2": "one hundredth", "-3": "one thousandth", "-6": "one millionth", "-9": "one billionth", "-12": "one trillionth", "-15": "one quadrillionth", "-18": "one quintillionth", "-21": "one sextillionth", "-24": "one septillionth", "-27": "one octillionth", "-30": "one nonillionth" };
+
+// base units: [symbol, name, measures, defined by, examples]
+const BASE = [
+  ["s", "second", "Time", "The time for 9,192,631,770 vibrations of radiation from a cesium-133 atom. Atomic clocks keep this time.", ["About one heartbeat at rest.", "There are 86,400 seconds in a day."]],
+  ["m", "meter", "Length", "The distance light travels in a vacuum in 1/299,792,458 of a second.", ["A doorway is about 2 meters tall.", "Originally meant to be one ten-millionth of the distance from the North Pole to the equator."]],
+  ["kg", "kilogram", "Mass", "Fixed by the Planck constant since 2019. Before that, it was the mass of a metal cylinder kept near Paris.", ["A liter of water has a mass of about 1 kg.", "1 kg is about 2.2 pounds."]],
+  ["A", "ampere", "Electric current", "The flow of exactly 1/(1.602176634 × 10⁻¹⁹) elementary charges per second, about 6.24 × 10¹⁸ electrons per second.", ["A 100-watt light on a 120-volt circuit draws a little under 1 amp.", "A truck starter motor can draw several hundred amps."]],
+  ["K", "kelvin", "Temperature", "Fixed by the Boltzmann constant. Zero kelvin is absolute zero, the coldest possible temperature.", ["Water freezes at 273.15 K.", "Room temperature is about 293 K. There is no degree sign on kelvin."]],
+  ["mol", "mole", "Amount of substance", "Exactly 6.02214076 × 10²³ particles (Avogadro's number).", ["18 grams of water is one mole of water molecules.", "12 grams of carbon-12 is very close to one mole of atoms."]],
+  ["cd", "candela", "Brightness of light", "Based on the brightness of a light source giving off green light (540 terahertz) at a set power in one direction.", ["About the brightness of one ordinary candle, which is where the name comes from."]]
+];
+// derived units: [symbol, name, measures, equals, named after, example]
+const DERIVED = [
+  ["Hz", "hertz", "Frequency", "1/s", "Heinrich Hertz, German physicist", "U.S. household electricity alternates at 60 Hz."],
+  ["N", "newton", "Force", "kg·m/s²", "Isaac Newton, English physicist", "A medium apple weighs about 1 newton."],
+  ["Pa", "pascal", "Pressure", "N/m²", "Blaise Pascal, French scientist", "Air pressure at sea level is about 101,325 Pa (14.7 psi)."],
+  ["J", "joule", "Energy, work", "N·m", "James Prescott Joule, English physicist", "Lifting an apple 1 meter takes about 1 joule. One food Calorie is 4,184 J."],
+  ["W", "watt", "Power", "J/s", "James Watt, Scottish engineer", "One horsepower is about 746 watts."],
+  ["C", "coulomb", "Electric charge", "A·s", "Charles-Augustin de Coulomb, French physicist", "One coulomb is the charge of about 6.24 × 10¹⁸ electrons."],
+  ["V", "volt", "Voltage", "W/A", "Alessandro Volta, Italian physicist", "An AA battery is 1.5 V, a car battery 12 V, and a U.S. wall outlet 120 V."],
+  ["F", "farad", "Capacitance", "C/V", "Michael Faraday, English scientist", "A farad is huge. Most capacitors are rated in microfarads or picofarads."],
+  ["Ω", "ohm", "Resistance", "V/A", "Georg Ohm, German physicist", "Ohm's law: voltage = current × resistance (V = IR)."],
+  ["S", "siemens", "Conductance", "A/V", "Werner von Siemens, German engineer", "Conductance is the opposite of resistance: 1 S = 1/Ω."],
+  ["Wb", "weber", "Magnetic flux", "V·s", "Wilhelm Weber, German physicist", "Changing magnetic flux through a coil is how generators make voltage."],
+  ["T", "tesla", "Magnetic field strength", "Wb/m²", "Nikola Tesla, Serbian-American inventor", "Earth's magnetic field is about 50 microtesla. An MRI machine is 1.5 to 3 T."],
+  ["H", "henry", "Inductance", "Wb/A", "Joseph Henry, American scientist", "Coils in power supplies and radios are rated in millihenries and microhenries."],
+  ["°C", "degree Celsius", "Temperature", "K − 273.15", "Anders Celsius, Swedish astronomer", "A change of 1 °C is the same size as a change of 1 K. Water boils at 100 °C at sea level."],
+  ["lm", "lumen", "Total light given off", "cd·sr", "Latin lumen, meaning light", "A 60-watt-equivalent LED bulb gives about 800 lumens."],
+  ["lx", "lux", "Light falling on a surface", "lm/m²", "Latin lux, meaning light", "An office is lit to about 500 lux. Direct sunlight is about 100,000 lux."],
+  ["Bq", "becquerel", "Radioactivity", "1/s", "Henri Becquerel, French physicist", "One decay per second. A banana has about 15 Bq from its potassium-40."],
+  ["Gy", "gray", "Absorbed radiation dose", "J/kg", "Louis Harold Gray, English physicist", "Used in cancer radiation therapy, where doses are a few gray per session."],
+  ["Sv", "sievert", "Radiation dose to the body", "J/kg", "Rolf Sievert, Swedish physicist", "Natural background radiation gives a typical American about 3 millisieverts a year."],
+  ["kat", "katal", "Catalytic activity", "mol/s", "Greek katalysis, meaning dissolving", "Used in chemistry and medicine to measure how fast enzymes work."],
+  ["rad", "radian", "Angle", "m/m", "From radius", "A full circle is 2π radians (360°). One radian is about 57.3°."],
+  ["sr", "steradian", "Solid angle (3-D angle)", "m²/m²", "Greek stereos, meaning solid", "A whole sphere, seen from its center, covers 4π steradians."]
+];
+
+// ---------- items & layout ----------
+// grid: 25 columns. Row 1 prefixes, row 3 base units, rows 5-6 derived units.
+const ITEMS = [];
+PREFIXES.forEach((p, i) => ITEMS.push({ kind: "prefix", x: i, y: 0.8, sym: p[2] === "1" ? "–" : p[2], name: p[1], exp: p[0], year: p[3], origin: p[4], ex: p[5] }));
+BASE.forEach((b, i) => ITEMS.push({ kind: "base", x: 9 + i, y: 3.3, sym: b[0], name: b[1], measures: b[2], def: b[3], ex: b[4] }));
+DERIVED.forEach((d, i) => ITEMS.push({ kind: "derived", x: 7 + (i % 11), y: 5.8 + Math.floor(i / 11) * 1.05, sym: d[0], name: d[1], measures: d[2], eq: d[3], after: d[4], ex: [d[5]] }));
+const COLS = 25, ROWS = 7.85;
+const KIND = {
+  prefix: { label: "Prefix", color: null },
+  base: { label: "SI base unit", color: "#8fd18a" },
+  derived: { label: "Derived unit with a special name", color: "#b9a4f2" }
+};
+function prefixColor(exp) {
+  // small = blue, big = orange
+  const t = (exp + 30) / 60;
+  const a = [120, 180, 245], m = [235, 235, 240], b = [245, 170, 100];
+  const c = t < 0.5 ? a.map((v, i) => v + (m[i] - v) * t * 2) : m.map((v, i) => v + (b[i] - v) * (t - 0.5) * 2);
+  return `rgb(${c.map(Math.round).join(",")})`;
+}
+ITEMS.forEach(it => { it.color = it.kind === "prefix" ? prefixColor(it.exp) : KIND[it.kind].color; });
+
+// ---------- formatting ----------
+function sup(s) { const m = { "-": "⁻", "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹" }; return String(s).split("").map(c => m[c] ?? c).join(""); }
+function writtenOut(e) {
+  if (e >= 0 && e <= 12) return (10 ** e).toLocaleString("en-US");
+  if (e < 0 && e >= -9) return "0." + "0".repeat(-e - 1) + "1";
+  if (e > 0) return `1 followed by ${e} zeros`;
+  return `Decimal point, ${-e - 1} zeros, then a 1`;
+}
+
+// ---------- canvas & camera ----------
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+let W = 0, H = 0;
+function resize() {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  W = window.innerWidth; H = window.innerHeight;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+window.addEventListener("resize", resize); resize();
+function overviewCam() {
+  const L = 20, R = 20, Tp = 80, B = 44;
+  const s = Math.min((W - L - R) / COLS, (H - Tp - B) / ROWS);
+  const bx = (L + W - R) / 2, by = (Tp + H - B) / 2;
+  return { cx: COLS / 2 - (bx - W / 2) / s, cy: ROWS / 2 - (by - H / 2) / s, s };
+}
+function landscape() { return W > 760 && W > H; }
+function closeScale() { return landscape() ? Math.min(W / 7, H / 4.6) : Math.min(W / 3.6, H / 7); }
+function targetOffset() { return landscape() ? [-W * 0.23, 0] : [0, -H * 0.3]; }
+function toScreen(x, y, cam) { return [W / 2 + (x - cam.cx) * cam.s, H / 2 + (y - cam.cy) * cam.s]; }
+function roundRect(x, y, w, h, r) {
+  ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+}
+function fitFont(text, weight, size, maxW) {
+  ctx.font = `${weight} ${size}px Inter, Arial`;
+  const w = ctx.measureText(text).width;
+  if (w > maxW) { size = Math.floor(size * maxW / w); ctx.font = `${weight} ${size}px Inter, Arial`; }
+}
+function draw(cam, target, glow, dim, overlay) {
+  ctx.fillStyle = "#0b1020"; ctx.fillRect(0, 0, W, H);
+  const s = cam.s, gap = Math.max(1.5, s * 0.07), r = Math.max(2, s * 0.08);
+  ctx.textAlign = "center";
+  // section headings
+  ctx.fillStyle = `rgba(170,180,200,${0.8 - 0.7 * dim})`;
+  const hs = Math.max(10, Math.round(s * 0.24));
+  ctx.font = `700 ${hs}px Inter, Arial`;
+  for (const [x, y, t] of [[12.5, 0.55, "PREFIXES"], [12.5, 3.05, "THE 7 BASE UNITS"], [12.5, 5.55, "DERIVED UNITS WITH SPECIAL NAMES"]]) {
+    const [hx, hy] = toScreen(x, y, cam); ctx.fillText(t, hx, hy);
+  }
+  ctx.font = `600 ${Math.max(9, Math.round(s * 0.2))}px Inter, Arial`;
+  let [ax, ay] = toScreen(0, 0.55, cam); ctx.textAlign = "left"; ctx.fillText("← smaller", ax, ay);
+  [ax, ay] = toScreen(25, 0.55, cam); ctx.textAlign = "right"; ctx.fillText("larger →", ax, ay);
+  ctx.textAlign = "center";
+
+  for (const it of ITEMS) {
+    const [sx, sy] = toScreen(it.x, it.y, cam);
+    if (sx > W || sy > H || sx + s < 0 || sy + s < 0) continue;
+    ctx.globalAlpha = it === target ? 1 : 1 - 0.55 * dim;
+    ctx.fillStyle = it.color;
+    roundRect(sx + gap / 2, sy + gap / 2, s - gap, s - gap, r); ctx.fill();
+    ctx.fillStyle = "#141822";
+    const inner = s * 0.86;
+    fitFont(it.sym, 800, Math.round(s * 0.4), inner);
+    ctx.fillText(it.sym, sx + s / 2, sy + s * 0.55);
+    if (s > 34) {
+      fitFont(it.name, 400, Math.round(s * 0.13), inner);
+      ctx.fillText(it.name, sx + s / 2, sy + s * 0.75);
+      const sub = it.kind === "prefix" ? "10" + sup(it.exp) : it.measures;
+      fitFont(sub, 600, Math.round(s * (it.kind === "prefix" ? 0.15 : 0.1)), inner);
+      ctx.fillText(sub, sx + s / 2, sy + s * 0.91);
+    }
+    ctx.globalAlpha = 1;
+  }
+  if (target && glow > 0) {
+    const [sx, sy] = toScreen(target.x, target.y, cam);
+    const pulse = 0.6 + 0.4 * Math.sin(performance.now() / 300);
+    ctx.strokeStyle = `rgba(255,255,255,${glow * pulse})`; ctx.lineWidth = Math.max(3, s * 0.05);
+    ctx.shadowColor = "white"; ctx.shadowBlur = 18 * glow;
+    roundRect(sx, sy, s, s, r); ctx.stroke(); ctx.shadowBlur = 0;
+  }
+}
+
+// ---------- card ----------
+const card = document.getElementById("card");
+function showCard(it) {
+  let chipColor = it.color, head, facts, ex;
+  if (it.kind === "prefix") {
+    const none = it.exp === 0;
+    head = none ? "No prefix" : it.name[0].toUpperCase() + it.name.slice(1);
+    facts = `
+      <div><div class="label">Multiplies by</div><div class="val">10${sup(it.exp)}</div></div>
+      <div><div class="label">In words</div><div class="val">${WORDS[it.exp]}</div></div>
+      <div class="full"><div class="label">Written out</div><div class="val">${writtenOut(it.exp)}</div></div>
+      ${none ? "" : `<div><div class="label">Symbol</div><div class="val">${it.sym}</div></div>
+      <div><div class="label">Adopted</div><div class="val">${it.year}</div></div>
+      <div class="full"><div class="label">Where the name comes from</div><div class="txt">${it.origin}</div></div>`}`;
+  } else if (it.kind === "base") {
+    head = it.name[0].toUpperCase() + it.name.slice(1);
+    facts = `
+      <div><div class="label">Measures</div><div class="val">${it.measures}</div></div>
+      <div><div class="label">Symbol</div><div class="val">${it.sym}</div></div>
+      <div class="full"><div class="label">Defined as</div><div class="txt">${it.def}</div></div>`;
+  } else {
+    head = it.name[0].toUpperCase() + it.name.slice(1);
+    facts = `
+      <div><div class="label">Measures</div><div class="val">${it.measures}</div></div>
+      <div><div class="label">Equals</div><div class="val">${it.eq}</div></div>
+      <div class="full"><div class="label">Named for</div><div class="txt">${it.after}</div></div>`;
+  }
+  ex = `<div class="ex"><div class="label">${it.ex.length > 1 ? "Examples" : "Example"}</div><ul>${it.ex.map(e => `<li>${e}</li>`).join("")}</ul></div>`;
+  card.innerHTML = `
+    <div class="head">
+      <div class="tile" style="background:${it.color}">${it.sym}</div>
+      <div><h1>${head}</h1><span class="chip" style="background:${chipColor}">${KIND[it.kind].label}</span></div>
+    </div>
+    <div class="facts">${facts}</div>${ex}`;
+  card.className = (landscape() ? "right" : "bottom") + " show";
+}
+function hideCard() { card.className = card.className.replace(" show", ""); }
+
+// ---------- animation ----------
+const ease = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+const T = { overview: 3000, zoomIn: 4000, hold: 11000, zoomOut: 3000 };
+let phase = "overview", t0 = performance.now(), last = [];
+function pick() {
+  let d;
+  do { d = ITEMS[Math.floor(Math.random() * ITEMS.length)]; } while (last.includes(d));
+  last.push(d); if (last.length > 25) last.shift();
+  return d;
+}
+let target = pick();
+function next() {
+  if (phase === "hold") { phase = "zoomOut"; t0 = performance.now(); hideCard(); }
+  else if (phase === "overview") { phase = "zoomIn"; t0 = performance.now(); }
+}
+function camAt(u) {
+  const ov = overviewCam(), sc = closeScale();
+  const s = Math.exp(Math.log(ov.s) + (Math.log(sc) - Math.log(ov.s)) * u);
+  const P = [target.x + 0.5, target.y + 0.5];
+  const q0 = [(P[0] - ov.cx) * ov.s, (P[1] - ov.cy) * ov.s];
+  const off = targetOffset();
+  const q = [q0[0] + (off[0] - q0[0]) * u, q0[1] + (off[1] - q0[1]) * u];
+  return { cx: P[0] - q[0] / s, cy: P[1] - q[1] / s, s };
+}
+const titleEl = document.getElementById("title");
+function frame(now) {
+  const el = now - t0;
+  let cam, glow = 0, overlay = 0, dim = 0;
+  if (phase === "overview") {
+    cam = overviewCam(); overlay = 1;
+    glow = el > 1200 ? Math.min(1, (el - 1200) / 500) : 0;
+    if (el > T.overview) { phase = "zoomIn"; t0 = now; }
+  } else if (phase === "zoomIn") {
+    const u = ease(Math.min(1, el / T.zoomIn));
+    cam = camAt(u); glow = 1; overlay = 1 - u; dim = u;
+    if (el > T.zoomIn) { phase = "hold"; t0 = now; showCard(target); }
+  } else if (phase === "hold") {
+    cam = camAt(1); glow = 1; dim = 1;
+    if (el > T.hold) { phase = "zoomOut"; t0 = now; hideCard(); }
+  } else {
+    const u = ease(Math.min(1, el / T.zoomOut));
+    cam = camAt(1 - u); glow = 1 - u; overlay = u; dim = 1 - u;
+    if (el > T.zoomOut) { phase = "overview"; t0 = now; target = pick(); }
+  }
+  titleEl.style.opacity = overlay;
+  draw(cam, target, glow, dim, overlay);
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+window.addEventListener("resize", () => { if (phase === "hold") showCard(target); });
+
+// ---------- controls ----------
+document.addEventListener("keydown", e => {
+  if (e.code === "Space" || e.code === "ArrowRight") { e.preventDefault(); next(); }
+  if (e.key === "f" || e.key === "F") toggleFs();
+});
+canvas.addEventListener("click", next);
+function toggleFs() {
+  try {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen().catch(() => {});
+  } catch (e) {}
+}
+document.getElementById("fs").addEventListener("click", toggleFs);
+let idleTimer;
+function wake() { document.body.classList.remove("idle"); clearTimeout(idleTimer); idleTimer = setTimeout(() => document.body.classList.add("idle"), 3000); }
+document.addEventListener("mousemove", wake); document.addEventListener("touchstart", wake); wake();
+</script>
+</body>
+</html>
